@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API</title>
+</head>
+<body>
+    <h1>Test API</h1>
+    <button onclick="testAPI()">Test API</button>
+    <pre id="result"></pre>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = 'Testing...';
+            
+            try {
+                const response = await fetch('../payment/create-order.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        amount: 2000,
+                        currency: 'INR',
+                        name: 'Test',
+                        email: 'test@example.com',
+                        phone: '9876543210',
+                        plan: 'Standard Plan'
+                    })
+                });
+                
+                const data = await response.json();
+                resultDiv.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                resultDiv.textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

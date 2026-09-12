@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International Medical Facilitator Partnership Program | Sudama Global Health</title>
+  <meta name="description" content="Join Sudama Global Health as an International Medical Facilitator. High-profit equity sharing model up to 50%, 100+ top JCI/NABH hospital networks in India, and 100% ground operational support.">
+  
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Montserrat & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. CORE SYSTEM & RESPONSIVE SETUP
+       ========================================================================== */
+    :root {
+      --primary-blue: #23376e;
+      --secondary-yellow: #ffc35a;
+      --bg-soft: #FEF8EA;
+      --text-main: #23376e;
+      --text-muted: #3d4f7c;
+      --text-light: #6e7d9f;
+      --border-color: #E6DFD3;
+      --card-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+      --hover-shadow: 0px 14px 30px rgba(35, 55, 110, 0.12);
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Montserrat', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-soft);
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      padding-top: 85px;
+      background-color: var(--bg-soft);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Section Typography */
+    .section-title-wrapper {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-subtitle {
+      color: var(--secondary-yellow);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      line-height: 1.25;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3.5px;
+      background: var(--secondary-yellow);
+      border-radius: 2px;
+      margin: 8px auto 0 auto;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .logo-img {
+      height: 60px;
+      max-width: 250px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      outline: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--secondary-yellow);
+      color: var(--primary-blue);
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(255, 195, 90, 0.35);
+    }
+
+    .btn-primary:hover {
+      background-color: #f0b243;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 195, 90, 0.45);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary-blue);
+      color: var(--primary-blue);
+      background: #FFFFFF;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       2. HEADER & NAVIGATION (FROM INDEX.HTML)
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: #FFFFFF;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(35, 55, 110, 0.05);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-highlight {
+      color: var(--secondary-yellow);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: var(--primary-blue);
+      font-size: 0.95rem;
+      transition: var(--transition);
+      position: relative;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      color: var(--secondary-hover);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary-yellow);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      position: relative;
+    }
+
+    .lang-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .lang-btn:hover {
+      border-color: var(--primary-blue);
+      transform: scale(1.05);
+    }
+
+    .flag-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .lang-dropdown {
+      position: absolute;
+      top: 54px;
+      right: 0;
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(35, 55, 110, 0.15);
+      border: 1px solid var(--border-color);
+      padding: 8px;
+      width: 170px;
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 1010;
+    }
+
+    [dir="rtl"] .lang-dropdown {
+      right: auto;
+      left: 0;
+    }
+
+    .lang-dropdown.show {
+      display: flex;
+    }
+
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      transition: var(--transition);
+    }
+
+    .lang-option:hover {
+      background-color: var(--bg-soft);
+      color: var(--primary-blue);
+    }
+
+/* Drawer Toggle Button */
+
+        .drawer-toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-soft);
+            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        /* .drawer-toggle-btn:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+        } */
+
+        /* Drawer Sidebar */
+
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(35, 55, 110, 0.4);
+            backdrop-filter: blur(6px);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .drawer-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: #FFFFFF;
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            box-shadow: -10px 0 40px rgba(35, 55, 110, 0.15);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+        }
+
+        [dir="rtl"] .drawer-menu {
+            right: auto;
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .drawer-overlay.active .drawer-menu {
+            transform: translateX(0);
+        }
+
+        [dir="rtl"] .drawer-overlay.active .drawer-menu {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .drawer-close {
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--bg-soft);
+        }
+
+        .drawer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .drawer-link {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .drawer-link i {
+            width: 20px;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .drawer-link:hover {
+            background: var(--bg-soft);
+            color: var(--primary-blue);
+        }
+        .drawer-menu a {
+    text-decoration: none;
+}
+
+
+
+    /* ==========================================================================
+       3. HERO SECTION WITH VIDEO BACKGROUND & ANIMATED STATS
+       ========================================================================== */
+    .partnership-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 80px 0;
+      color: #FFFFFF;
+      border-bottom: 4px solid var(--secondary-yellow);
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(35, 55, 110, 0.85) 0%, rgba(20, 35, 75, 0.92) 100%);
+      z-index: 1;
+    }
+
+    .partnership-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 840px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 195, 90, 0.2);
+      border: 1px solid rgba(255, 195, 90, 0.6);
+      color: var(--secondary-yellow);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 18px;
+    }
+
+    .partnership-hero-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+
+    .partnership-hero-title span {
+      color: var(--secondary-yellow);
+    }
+
+    .partnership-hero-subtitle {
+      font-size: 1.05rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    /* Hero Stats Boxes with Animation */
+    .hero-stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .hero-stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 16px 12px;
+      border-radius: 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-stat-number {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--secondary-yellow);
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-stat-number .counter {
+      display: inline-block;
+    }
+
+    .hero-stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       4. EXECUTIVE SUMMARY & PROPER BOX LAYOUTS
+       ========================================================================== */
+    .summary-section {
+      padding: 68px 0;
+    }
+
+    .summary-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .summary-text {
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+
+    .vision-badges-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .vision-badge-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border-color);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 100%;
+    }
+
+    .vision-badge-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--primary-blue);
+      color: var(--secondary-yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .vision-badge-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+    }
+
+    /* Benefits Section Grid */
+    .benefits-section {
+      padding: 60px 0;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .benefit-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .benefit-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(255, 195, 90, 0.2);
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 195, 90, 0.5);
+    }
+
+    .benefit-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+    }
+
+    .benefit-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       5. PROFIT TIERS & ANCILLARY BOXES
+       ========================================================================== */
+    .profit-section {
+      padding: 68px 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .profit-intro-box {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 36px;
+      border: 1px dashed var(--secondary-yellow);
+      text-align: center;
+    }
+
+    .profit-intro-text {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+    }
+
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+
+    .tier-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 22px 16px;
+      border: 2px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      height: 100%;
+    }
+
+    .tier-card.featured {
+      border-color: var(--secondary-yellow);
+      background: #FFFFFF;
+      box-shadow: var(--hover-shadow);
+    }
+
+    .tier-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-blue);
+      color: var(--secondary-yellow);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    .tier-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      text-align: center;
+    }
+
+    .tier-volume {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .tier-payout {
+      background: var(--secondary-yellow);
+      color: var(--primary-blue);
+      font-size: 1.15rem;
+      font-weight: 900;
+      padding: 8px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .tier-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .tier-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .tier-features li i {
+      color: #10B981;
+      margin-top: 2px;
+    }
+
+    .ancillary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .ancillary-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 100%;
+    }
+
+    .ancillary-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--primary-blue);
+      color: var(--secondary-yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       6. REGISTRATION FORM & CONTACT
+       ========================================================================== */
+    .registration-section {
+      padding: 68px 0;
+    }
+
+    .registration-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .contact-info-panel {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .contact-person-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+    }
+
+    .form-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background: var(--bg-soft);
+      outline: none;
+    }
+
+    .phone-input-group {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 10px;
+    }
+
+   /* ==========================================================================
+   11. FOOTER SECTION
+   ========================================================================== */
+
+.site-footer {
+    background: #23376e;
+    color: #FFFFFF;
+    padding: 70px 0 30px 0;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-brand-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-yellow);
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #FFFFFF;
+}
+
+.footer-contact-item i {
+    color: var(--secondary-yellow);
+    margin-top: 4px;
+}
+
+/* ===== REMOVE UNDERLINE FROM CONTACT LINKS (PHONE & EMAIL) ===== */
+.footer-contact-item a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-contact-item a:hover {
+    color: var(--secondary-yellow);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.88rem;
+    color: #FFFFFF;
+}
+
+.footer-bottom a {
+    color: var(--secondary-yellow);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #FFFFFF;
+}
+
+.footer-social-group {
+    margin-top: 20px;
+}
+
+.footer-social-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+}
+
+.social-icons-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 195, 90, 0.35);
+    text-decoration: none;
+}
+
+.social-icon-btn:hover {
+    background: var(--secondary-yellow);
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 195, 90, 0.35);
+}
+    /* ==========================================================================
+       8. MOBILE RESPONSIVE BREAKPOINTS (FROM INDEX.HTML)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-title-wrapper {
+        min-height: 95px;
+      }
+
+      .treatments-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .doctor-card {
+        flex: 0 0 calc(50% - 12px);
+      }
+
+      .hospitals-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .doctors-grid-view {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .appointment-split {
+        grid-template-columns: 1fr;
+      }
+
+      .appointment-visual {
+        padding: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 75px;
+      }
+
+      .site-header {
+        height: 75px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .drawer-toggle-btn {
+        display: flex;
+      }
+
+      .section-padding {
+        padding: 50px 0;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.98rem;
+        margin-bottom: 32px;
+      }
+
+      .partnership-hero {
+        min-height: 400px;
+        padding: 40px 0;
+      }
+
+      .partnership-hero-title {
+        font-size: 1.7rem;
+      }
+
+      .benefits-grid,
+      .ancillary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vision-badges-grid,
+      .tiers-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .appointment-form-box {
+        padding: 24px 16px;
+      }
+
+      .appointment-visual {
+        padding: 30px 20px;
+      }
+
+      .appointment-visual-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .phone-input-group {
+        grid-template-columns: 80px 1fr;
+      }
+
+      .partnership-hero-title {
+        font-size: 1.4rem;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER (FROM INDEX.HTML)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand-logo-group">
+        <img src="https://vikashsaran04.github.io/sudamaglobalhealth.com/logo.jpg"
+          alt="Sudama Global Health Logo" class="logo-img"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=100&auto=format&fit=crop&q=80';">
+      </div>
+
+     <nav class="nav-menu">
+                <a href="index.html#home" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="index.html#treatments" class="nav-link" data-i18n="nav_treatments">Treatments</a>
+                <a href="index.html#process" class="nav-link" data-i18n="nav_process">Process</a>
+                <a href="index.html#hospitals" class="nav-link" data-i18n="nav_hospitals">Hospitals</a>
+                <!-- <a href="#doctors" class="nav-link" data-i18n="nav_doctors">Doctors</a> -->
+                <a href="index.html#appointment" class="nav-link" data-i18n="nav_contact">Help/Contact</a>
+                <!-- <a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a> -->
+                <a href="facilitator-partnership-progra.html" class="nav-link"
+                    data-i18n="nav_Partnership Program">Partnership Program</a>
+                <a href="subscription.html" class="nav-link" data-i18n="nav_subscription"> Health club</a>
+            </nav>
+
+      <!-- ===== HEADER ACTIONS - FROM INDEX.HTML ===== -->
+      <div class="header-actions">
+        <!-- Circular Language Selector -->
+        <div class="lang-switcher">
+          <button class="lang-btn" id="langBtn" aria-label="Select Language">
+            <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon" id="currentFlag">
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-option" onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png', 'ltr')">
+              <img src="https://flagcdn.com/w40/us.png" alt="US Flag" class="flag-icon"> English
+            </div>
+            <div class="lang-option" onclick="changeLanguage('fr', 'https://flagcdn.com/w40/fr.png', 'ltr')">
+              <img src="https://flagcdn.com/w40/fr.png" alt="France Flag" class="flag-icon"> Français
+            </div>
+            <div class="lang-option" onclick="changeLanguage('ar', 'https://flagcdn.com/w40/sa.png', 'rtl')">
+              <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Flag" class="flag-icon"> العربية
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Professional Drawer Toggle Button -->
+        <button class="drawer-toggle-btn" id="drawerToggleBtn" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+ <!-- Glassmorphic Mobile/Desktop Drawer Menu -->
+    <div class="drawer-overlay" id="drawerOverlay">
+        <div class="drawer-menu">
+            <div class="drawer-header">
+                <div class="brand-name">Sudama <span class="brand-highlight">Health</span></div>
+                <div class="drawer-close" id="drawerClose">&times;</div>
+            </div>
+            <div class="drawer-links">
+                <a href="index.html" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-house"></i> <span
+                        data-i18n="nav_home">Home</span></a>
+                <a href="index.html#treatments" class="drawer-link" onclick="closeDrawer()"><i
+                        class="fa-solid fa-stethoscope"></i> <span data-i18n="nav_treatments">Treatments</span></a>
+                <a href="index.html#process" class="drawer-link" onclick="closeDrawer()"><i
+                        class="fa-solid fa-clipboard-list"></i> <span data-i18n="nav_process">Process</span></a>
+                <a href="index.html#hospitals" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-hospital"></i>
+                    <span data-i18n="nav_hospitals">Hospitals</span></a>
+                <a href="index.html#doctors" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-user-doctor"></i>
+                    <span data-i18n="nav_doctors">Doctors</span></a>
+                <a href="index.html#appointment" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-headset"></i>
+                    <span data-i18n="nav_contact">Help & Contact</span></a>
+                <a href="blog.html" class="drawer-link"><i class="fa-solid fa-newspaper"></i> <span
+                        data-i18n="nav_blog">Blogs</span></a>
+                <a href="facilitator-partnership-progra.html" class="drawer-link active"><i
+                        class="fa-solid fa-handshake-simple"></i> <span data-i18n="nav_partnership">Partnership
+                        Program</span></a>
+                <a href="subscription.html" class="drawer-link active" onclick="closeDrawer()"><i
+                        class="fa-solid fa-crown"></i> <span data-i18n="nav_subscription"> Health club</span></a>
+                <a href="subscription.html" class="drawer-link" onclick="closeDrawer()">
+                    <!-- <i class="fa-solid fa-crown"></i> <span data-i18n="nav_subscription">Subscription</span> -->
+                </a>
+            </div>
+        </div>
+    </div>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH VIDEO BACKGROUND & ANIMATED STATS
+       ========================================================================== -->
+  <section class="partnership-hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="partner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container partnership-hero-content">
+      <div class="hero-badge-pill">
+        <i class="fa-solid fa-handshake-angle"></i> Global Medical Facilitator Alliance
+      </div>
+      <h1 class="partnership-hero-title">
+        Join as an International <span>Medical Facilitator</span>
+      </h1>
+      <p class="partnership-hero-subtitle">
+        Empowering Global Healthcare Facilitators with High-Profit Equity Sharing & End-to-End Operational Excellence.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="#partnership-form" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> Apply for Partnership
+        </a>
+        <a href="sudama_medical_facilitator_proposal_v3.pdf" download class="btn btn-outline" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+          <i class="fa-solid fa-file-pdf"></i> Download Proposal
+        </a>
+      </div>
+
+      <div class="hero-stats-row" id="statsRow">
+        <div class="hero-stat-card">
+          <div class="hero-stat-number">
+            <span class="counter" data-target="49" data-prefix="Up to " data-suffix="%">0</span>
+          </div>
+          <div class="hero-stat-label">NET PROFIT SHARE</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-number">
+            <span class="counter" data-target="97" data-prefix="" data-suffix="+">0</span>
+          </div>
+          <div class="hero-stat-label">JCI/NABH HOSPITALS</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-number">
+            <span class="counter" data-target="94" data-prefix="" data-suffix="%">0</span>
+          </div>
+          <div class="hero-stat-label">GROUND LOGISTICS</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-number">
+            <span class="counter" data-target="12" data-prefix="7-" data-suffix=" Days">0</span>
+          </div>
+          <div class="hero-stat-label">FAST PAYOUTS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="summary-section">
+    <div class="container">
+      <div class="summary-card">
+        <div class="section-subtitle">Executive Summary & Vision</div>
+        <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Bridging Global Patients with India's Premier Medical Network</h2>
+        <p class="summary-text">
+          <strong>Sudama Global Health</strong> is India's premier medical tourism facilitation platform, bridging the gap between international patients and India's top JCI and NABH accredited hospitals.
+        </p>
+
+        <div class="vision-badges-grid">
+          <div class="vision-badge-card">
+            <div class="vision-badge-icon"><i class="fa-solid fa-hospital"></i></div>
+            <div class="vision-badge-title">100+ Hospital Chains</div>
+          </div>
+          <div class="vision-badge-card">
+            <div class="vision-badge-icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <div class="vision-badge-title">World Specialists</div>
+          </div>
+          <div class="vision-badge-card">
+            <div class="vision-badge-icon"><i class="fa-solid fa-file-contract"></i></div>
+            <div class="vision-badge-title">Transparent Equity</div>
+          </div>
+          <div class="vision-badge-card">
+            <div class="vision-badge-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="vision-badge-title">24/7 Concierge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">Value Proposition</div>
+        <h2 class="section-title">Why Partner With Us?</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="fa-solid fa-hospital-user"></i></div>
+          <h3 class="benefit-title">Direct Hospital & Specialist Access</h3>
+          <p class="benefit-desc">Priority access to leading hospital chains in Oncology, Cardiology, Orthopedics, Transplants, and Neurology.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="fa-solid fa-notes-medical"></i></div>
+          <h3 class="benefit-title">Complete Patient Lifecycle Support</h3>
+          <p class="benefit-desc">Tele-consultations, customized treatment plans, M-Visa assistance, airport transfers, and local coordinators.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+          <h3 class="benefit-title">Transparent Accounting & Fast Settlements</h3>
+          <p class="benefit-desc">Clear profit calculations per case with direct disbursements handled within 7 to 14 days.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3 class="benefit-title">Co-Branded Marketing Support</h3>
+          <p class="benefit-desc">Grow your brand using our collateral, clinical case studies, digital portals, and health camp tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PURE NET PROFIT TIERS -->
+  <section class="profit-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">Lucrative Payout Architecture</div>
+        <h2 class="section-title">Pure Net Profit Sharing Tiers</h2>
+      </div>
+
+      <div class="profit-intro-box">
+        <p class="profit-intro-text"><i class="fa-solid fa-chart-line" style="color:var(--secondary-yellow);"></i> Earn a direct percentage share of total net profits generated per patient case.</p>
+      </div>
+
+      <div class="tiers-grid">
+        <div class="tier-card">
+          <div class="tier-name">Associate</div>
+          <div class="tier-volume">1 – 2 Patients / Mo</div>
+          <div class="tier-payout">30% Share</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-circle-check"></i> Standard Ground Support</li>
+            <li><i class="fa-solid fa-circle-check"></i> Direct Doctor Access</li>
+          </ul>
+        </div>
+        <div class="tier-card">
+          <div class="tier-name">Silver</div>
+          <div class="tier-volume">3 – 9 Patients / Mo</div>
+          <div class="tier-payout">35% - 40% Share</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-circle-check"></i> Priority Concierge</li>
+            <li><i class="fa-solid fa-circle-check"></i> Express Opinions</li>
+          </ul>
+        </div>
+        <div class="tier-card featured">
+          <div class="tier-badge">Popular</div>
+          <div class="tier-name">Gold</div>
+          <div class="tier-volume">10 – 15 Patients / Mo</div>
+          <div class="tier-payout">45% Share</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-circle-check"></i> VIP Airport Transfers</li>
+            <li><i class="fa-solid fa-circle-check"></i> Co-Branded Marketing</li>
+          </ul>
+        </div>
+        <div class="tier-card">
+          <div class="tier-name">Platinum</div>
+          <div class="tier-volume">16+ Patients / Mo</div>
+          <div class="tier-payout">50% Share</div>
+          <ul class="tier-features">
+            <li><i class="fa-solid fa-circle-check"></i> 50/50 Joint Venture</li>
+            <li><i class="fa-solid fa-circle-check"></i> VIP Hospital Lounges</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ancillary-grid">
+        <div class="ancillary-card">
+          <div class="ancillary-icon"><i class="fa-solid fa-spa"></i></div>
+          <div>
+            <strong style="color:var(--primary-blue);">Wellness & Recovery Packages</strong>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Up to 45% profit share on post-op Ayurveda and resort recovery.</p>
+          </div>
+        </div>
+        <div class="ancillary-card">
+          <div class="ancillary-icon"><i class="fa-solid fa-hotel"></i></div>
+          <div>
+            <strong style="color:var(--primary-blue);">Logistics & Stay</strong>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Share in net profits from hotel stays, transits, and family arrangements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM & CONTACT -->
+  <section class="registration-section" id="partnership-form">
+    <div class="container">
+      <div class="registration-grid">
+        <div class="contact-info-panel">
+          <div style="color:var(--secondary-yellow); font-size:0.75rem; font-weight:800;">SUDAMA GLOBAL TRADE</div>
+          <h3 style="font-size:1.5rem; font-weight:900; margin-bottom:20px;">Health & Wellness Division</h3>
+
+          <div class="contact-person-card">
+            <div style="color:var(--secondary-yellow); font-size:0.72rem; font-weight:800;">FOUNDER & CEO</div>
+            <div style="font-weight:800;">Abhijeet Borade</div>
+            <a href="tel:+917020753181" style="color:#FFF; text-decoration:none; font-size:0.85rem;"><i class="fa-solid fa-phone"></i> +91 70207 53181</a>
+          </div>
+
+          <div class="contact-person-card">
+            <div style="color:var(--secondary-yellow); font-size:0.72rem; font-weight:800;">CO-FOUNDER</div>
+            <div style="font-weight:800;">Amol Badad</div>
+            <a href="tel:+917030643132" style="color:#FFF; text-decoration:none; font-size:0.85rem;"><i class="fa-solid fa-phone"></i> +91 70306 43132</a>
+          </div>
+
+          <!-- <div class="contact-person-card">
+            <div style="color:var(--secondary-yellow); font-size:0.72rem; font-weight:800;">SUPPORT TEAM</div>
+            <div style="font-weight:800;">24/7 Helpline</div>
+            <a href="tel:+919876543210" style="color:#FFF; text-decoration:none; font-size:0.85rem;"><i class="fa-solid fa-headset"></i> +91 98765 43210</a>
+          </div> -->
+        </div>
+
+        <div class="form-card">
+          <h3 style="font-size:1.5rem; font-weight:800; color:var(--primary-blue);">Apply for Partnership</h3>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">Fill out the form below to connect with our team.</p>
+
+          <form id="facilitatorForm" onsubmit="handleFacilitatorSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="facName">Full Name *</label>
+              <input type="text" id="facName" class="form-control" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="facCategory">Category / Role *</label>
+              <select id="facCategory" class="form-control" required>
+                <option value="" disabled selected>Select role...</option>
+                <option value="Individual Facilitator">Individual Facilitator</option>
+                <option value="Facilitator Team">Facilitator Agency</option>
+                <option value="Diagnostic Clinic">Diagnostic Clinic</option>
+                <option value="Hospital">Hospital</option>
+                <option value="Doctor">Doctor / Consultant</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="facPhone">Mobile Number (WhatsApp) *</label>
+              <div class="phone-input-group">
+                <input type="text" id="facPhoneCode" class="form-control" placeholder="+91" value="+91" required>
+                <input type="tel" id="facPhone" class="form-control" placeholder="Mobile number" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="facEmail">Email Address (Optional)</label>
+              <input type="email" id="facEmail" class="form-control" placeholder="name@domain.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="facCountry">Country *</label>
+              <input type="text" id="facCountry" class="form-control" placeholder="e.g. Kenya, UAE, Oman" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="facDescription">Description *</label>
+              <textarea id="facDescription" class="form-control" placeholder="Tell us about your experience..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <i class="fa-solid fa-paper-plane"></i> Submit Application
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Sudama Global <span style="color:var(--secondary-yellow);">Health</span></div>
+          <p style="margin-bottom: 20px; line-height: 1.6;">
+            India's premier medical tourism facilitation organization supporting international patients with
+            end-to-end healthcare coordination, visa assistance, and hospital stays.
+          </p>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Sai bungalow, Indiranagar, Nashik, Maharashtra, India - 422009</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#treatments">Treatments</a></li>
+            <li><a href="index.html#process">Process</a></li>
+            <li><a href="index.html#hospitals">Hospitals</a></li>
+            <li><a href="index.html#doctors">Doctors</a></li>
+            <li><a href="index.html#appointment">Help & Contact</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="subscription.html">Health Club</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact & Support</h4>
+
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <div style="font-size: 0.8rem; text-transform: uppercase;">Abhijeet Borade (CEO)</div>
+              <a href="https://wa.me/917020753181" target="_blank">+91 7020753181</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <div style="font-size: 0.8rem; text-transform: uppercase;">Amol Badad (Co-Founder)</div>
+              <a href="https://wa.me/917030643132" target="_blank">+91 7030643132</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+              <a href="mailto:contact@sudamaglobalhealth.com">contact@sudamaglobalhealth.com</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+              <a href="mailto:info@sudamaglobalhealth.com">info@sudamaglobalhealth.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:Amol@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">Amol@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+        </div>
+      </div>
+
+      <div class="footer-social-group">
+        <div class="footer-social-title">Follow Us</div>
+        <div class="social-icons-list">
+          <a href="https://www.instagram.com/sudamaglobal.health?igsh=MXM1dzh2anU0MG55Mw%3D%3D&utm_source=qr" target="_blank" class="social-icon-btn" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/1JP7JDQgjq/?mibextid=wwXIfr" target="_blank" class="social-icon-btn" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/sudamaglobaltrade/" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/917020753181" target="_blank" class="social-icon-btn" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sudama Global Health. All Rights Reserved.</div>
+        <div>Design & Development by <a href="https://www.linkedin.com/in/jayeshjadhav11" target="_blank">Jayesh Jadhav</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC (FROM INDEX.HTML)
+       ========================================================================== -->
+  <script>
+    // ===== LANGUAGE SWITCHER =====
+    const langBtn = document.getElementById('langBtn');
+    const langDropdown = document.getElementById('langDropdown');
+
+    if (langBtn) {
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langDropdown.classList.toggle('show');
+      });
+    }
+
+    document.addEventListener('click', () => {
+      langDropdown.classList.remove('show');
+    });
+
+    let currentLanguage = 'en';
+
+    function changeLanguage(langKey, flagUrl, direction) {
+      currentLanguage = langKey;
+      localStorage.setItem('sgh_lang', langKey);
+      localStorage.setItem('sgh_flag', flagUrl);
+      localStorage.setItem('sgh_dir', direction);
+
+      const flagEl = document.getElementById('currentFlag');
+      if (flagEl) flagEl.src = flagUrl;
+      document.documentElement.dir = direction;
+      if (langDropdown) langDropdown.classList.remove('show');
+
+      // Simple translation - you can expand this
+      const translations = {
+        en: {
+          nav_home: "Home",
+          nav_treatments: "Treatments",
+          nav_process: "Process",
+          nav_hospitals: "Hospitals",
+          nav_doctors: "Doctors",
+          nav_contact: "Help & Contact",
+          nav_blog: "Blogs",
+          nav_partnership: "Partnership Program",
+          nav_subscription: "Health club"
+        },
+        fr: {
+          nav_home: "Accueil",
+          nav_treatments: "Traitements",
+          nav_process: "Processus",
+          nav_hospitals: "Hôpitaux",
+          nav_doctors: "Médecins",
+          nav_contact: "Aide & Contact",
+          nav_blog: "Blog Médical",
+          nav_partnership: "Programme de Partenariat",
+          nav_subscription: "Club Santé"
+        },
+        ar: {
+          nav_home: "الرئيسية",
+          nav_treatments: "العلاجات",
+          nav_process: "خطوات العلاج",
+          nav_hospitals: "المستشفيات",
+          nav_doctors: "الأطباء",
+          nav_contact: "المساعدة والاتصال",
+          nav_blog: "المدونة الطبية",
+          nav_partnership: "برنامج الشراكة",
+          nav_subscription: "نادي الصحة"
+        }
+      };
+
+      const dict = translations[langKey] || translations['en'];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+    }
+
+     /* ==========================================================================
+           2. DRAWER SIDEBAR TOGGLE
+           ========================================================================== */
+        const drawerToggleBtn = document.getElementById('drawerToggleBtn');
+        const drawerOverlay = document.getElementById('drawerOverlay');
+        const drawerClose = document.getElementById('drawerClose');
+
+        drawerToggleBtn.addEventListener('click', () => {
+            drawerOverlay.classList.add('active');
+        });
+
+        drawerClose.addEventListener('click', closeDrawer);
+        drawerOverlay.addEventListener('click', (e) => {
+            if (e.target === drawerOverlay) closeDrawer();
+        });
+
+        function closeDrawer() {
+            drawerOverlay.classList.remove('active');
+        }
+
+    // ===== FORM SUBMISSION =====
+    function handleFacilitatorSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('facName').value.trim();
+      const category = document.getElementById('facCategory').value;
+      const phoneCode = document.getElementById('facPhoneCode').value.trim();
+      const phoneNum = document.getElementById('facPhone').value.trim();
+      const email = document.getElementById('facEmail').value.trim();
+      const country = document.getElementById('facCountry').value.trim();
+      const desc = document.getElementById('facDescription').value.trim();
+
+      const message = `*New Partnership Application*%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*Role:* ${encodeURIComponent(category)}%0A` +
+        `*Country:* ${encodeURIComponent(country)}%0A` +
+        `*Phone:* ${encodeURIComponent(phoneCode + ' ' + phoneNum)}%0A` +
+        `*Email:* ${encodeURIComponent(email || 'N/A')}%0A` +
+        `*Description:* ${encodeURIComponent(desc)}`;
+
+      window.open(`https://wa.me/917020753181?text=${message}`, '_blank');
+    }
+
+    // ===== ANIMATED COUNTERS =====
+    function animateCounter(element, target, prefix, suffix, duration) {
+      const isFloat = target % 1 !== 0;
+      const startTime = performance.now();
+
+      element.textContent = prefix + '0' + suffix;
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = eased * target;
+
+        let displayValue;
+        if (isFloat) {
+          displayValue = current.toFixed(1);
+        } else {
+          displayValue = Math.floor(current);
+        }
+
+        element.textContent = prefix + displayValue + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          let finalValue;
+          if (isFloat) {
+            finalValue = target.toFixed(1);
+          } else {
+            finalValue = target;
+          }
+          element.textContent = prefix + finalValue + suffix;
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+
+    function animateStats() {
+      const counters = document.querySelectorAll('.counter');
+
+      counters.forEach((counter, index) => {
+        const target = parseFloat(counter.dataset.target);
+        const prefix = counter.dataset.prefix || '';
+        const suffix = counter.dataset.suffix || '';
+        const duration = 2000;
+
+        counter.textContent = prefix + '0' + suffix;
+
+        setTimeout(() => {
+          animateCounter(counter, target, prefix, suffix, duration);
+        }, 150 + (index * 150));
+      });
+    }
+
+    function resetStats() {
+      document.querySelectorAll('.counter').forEach(counter => {
+        const prefix = counter.dataset.prefix || '';
+        const suffix = counter.dataset.suffix || '';
+        counter.textContent = prefix + '0' + suffix;
+      });
+    }
+
+    let statsAnimated = false;
+    let animationTimeout = null;
+
+    function setupStatsObserver() {
+      const statsRow = document.getElementById('statsRow');
+
+      if (!statsRow) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !statsAnimated) {
+            resetStats();
+
+            if (animationTimeout) {
+              clearTimeout(animationTimeout);
+            }
+
+            statsAnimated = true;
+            animationTimeout = setTimeout(() => {
+              animateStats();
+              setTimeout(() => {
+                statsAnimated = false;
+              }, 3000);
+            }, 300);
+          } else if (!entry.isIntersecting) {
+            resetStats();
+            if (animationTimeout) {
+              clearTimeout(animationTimeout);
+              animationTimeout = null;
+            }
+            statsAnimated = false;
+          }
+        });
+      }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      observer.observe(statsRow);
+    }
+
+    // ===== INITIALIZE =====
+    document.addEventListener('DOMContentLoaded', function() {
+      setupStatsObserver();
+
+      // Auto load saved language from localStorage
+      const savedLang = localStorage.getItem('sgh_lang') || 'en';
+      const savedFlag = localStorage.getItem('sgh_flag') || 'https://flagcdn.com/w40/us.png';
+      const savedDir = localStorage.getItem('sgh_dir') || 'ltr';
+      changeLanguage(savedLang, savedFlag, savedDir);
+    });
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

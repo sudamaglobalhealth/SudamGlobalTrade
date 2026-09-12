@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudama Global Health – The India Advantage | Affordable Medicines</title>
+  <meta name="description" content="Access world-class Indian pharmaceuticals & medical equipment at source prices. WHO-GMP certified medicines at 50-80% lower than local market rates.">
+  
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Montserrat & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       1. CORE SYSTEM & RESPONSIVE SETUP
+       ========================================================================== */
+    :root {
+      --primary-blue: #23376e;
+      --secondary-yellow: #ffc35a;
+      --bg-soft: #FEF8EA;
+      --text-main: #23376e;
+      --text-muted: #3d4f7c;
+      --text-light: #6e7d9f;
+      --border-color: #E6DFD3;
+      --card-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+      --hover-shadow: 0px 14px 30px rgba(35, 55, 110, 0.12);
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --success-green: #10B981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Montserrat', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-soft);
+      color: var(--text-main);
+      line-height: 1.55;
+    }
+
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      padding-top: 85px;
+      background-color: var(--bg-soft);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Section Typography */
+    .section-title-wrapper {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-subtitle {
+      color: var(--secondary-yellow);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      line-height: 1.25;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3.5px;
+      background: var(--secondary-yellow);
+      border-radius: 2px;
+      margin: 8px auto 0 auto;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .logo-img {
+      height: 60px;
+      max-width: 250px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      outline: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--secondary-yellow);
+      color: var(--primary-blue);
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(255, 195, 90, 0.35);
+    }
+
+    .btn-primary:hover {
+      background-color: #f0b243;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 195, 90, 0.45);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary-blue);
+      color: var(--primary-blue);
+      background: #FFFFFF;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .btn-success {
+      background-color: #10B981;
+      color: #FFFFFF;
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-success:hover {
+      background-color: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.45);
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #FFFFFF;
+      font-weight: 800;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1DA851;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+    }
+
+   /* ==========================================================================
+       2. HEADER & NAVIGATION
+       ========================================================================== */
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #FFFFFF;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(35, 55, 110, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .brand-logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-highlight {
+            color: var(--secondary-yellow);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-link {
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    transition: var(--transition);
+    position: relative;
+    text-decoration: none;  /* ← ADD THIS */
+}
+
+        .nav-link:hover {
+            color: var(--secondary-hover);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-yellow);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        /* Language Switcher */
+
+        .lang-switcher {
+            position: relative;
+        }
+
+        .lang-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 54px;
+            right: 0;
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(35, 55, 110, 0.15);
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            width: 170px;
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 1010;
+        }
+
+        [dir="rtl"] .lang-dropdown {
+            right: auto;
+            left: 0;
+        }
+
+        .lang-dropdown.show {
+            display: flex;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .lang-option:hover {
+            background-color: var(--bg-soft);
+            color: var(--primary-blue);
+        }
+
+        /* Drawer Toggle Button */
+
+        .drawer-toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-soft);
+            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        /* .drawer-toggle-btn:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+        } */
+
+        /* Drawer Sidebar */
+
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(35, 55, 110, 0.4);
+            backdrop-filter: blur(6px);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .drawer-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: #FFFFFF;
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            box-shadow: -10px 0 40px rgba(35, 55, 110, 0.15);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+        }
+
+        [dir="rtl"] .drawer-menu {
+            right: auto;
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .drawer-overlay.active .drawer-menu {
+            transform: translateX(0);
+        }
+
+        [dir="rtl"] .drawer-overlay.active .drawer-menu {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .drawer-close {
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--bg-soft);
+        }
+
+        .drawer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .drawer-link {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .drawer-link i {
+            width: 20px;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .drawer-link:hover {
+            background: var(--bg-soft);
+            color: var(--primary-blue);
+        }
+        .drawer-menu a {
+    text-decoration: none;
+}
+
+    /* ==========================================================================
+       3. HERO SECTION WITH VIDEO BACKGROUND
+       ========================================================================== */
+    .subscription-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 68px 0 80px 0;
+      color: #FFFFFF;
+      border-bottom: 4px solid var(--secondary-yellow);
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(1, 43, 160, 0.85) 0%, rgba(20, 35, 75, 0.92) 100%);
+      z-index: 1;
+    }
+
+    .subscription-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 840px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 195, 90, 0.2);
+      border: 1px solid rgba(255, 195, 90, 0.6);
+      color: var(--secondary-yellow);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 18px;
+    }
+
+    .subscription-hero-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+
+    .subscription-hero-title span {
+      color: var(--secondary-yellow);
+    }
+
+    .subscription-hero-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-badge i {
+      color: var(--secondary-yellow);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       4. INDIA ADVANTAGE SECTION
+       ========================================================================== */
+    .india-advantage {
+      padding: 68px 0;
+      background: #FFFFFF;
+    }
+
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .advantage-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .advantage-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--hover-shadow);
+    }
+
+    .advantage-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--primary-blue);
+      color: var(--secondary-yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+
+    .advantage-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+    }
+
+    .advantage-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .advantage-stat {
+      display: inline-block;
+      background: var(--secondary-yellow);
+      color: var(--primary-blue);
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin-top: 8px;
+    }
+
+    /* ==========================================================================
+       5. COMPARISON CHART WITH ANIMATION
+       ========================================================================== */
+    .comparison-section {
+      padding: 68px 0;
+      background: var(--bg-soft);
+    }
+
+    .comparison-wrapper {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+      overflow-x: auto;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 700px;
+    }
+
+    .comparison-table thead {
+      background: var(--primary-blue);
+      color: #FFFFFF;
+    }
+
+    .comparison-table thead th {
+      padding: 14px 16px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .comparison-table tbody tr {
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.15s;
+    }
+
+    .comparison-table tbody tr:hover {
+      background: var(--bg-soft);
+    }
+
+    .comparison-table tbody td {
+      padding: 13px 16px;
+      vertical-align: middle;
+      font-size: 0.88rem;
+    }
+
+    .comparison-table tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-table .medicine-name {
+      font-weight: 700;
+      color: var(--primary-blue);
+    }
+
+    .comparison-table .use-case {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .comparison-table .international-price {
+      color: #EF4444;
+      font-weight: 700;
+    }
+
+    .comparison-table .india-price {
+      color: #10B981;
+      font-weight: 700;
+    }
+
+    .savings-cell {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .savings-bar-wrapper {
+      flex: 1;
+      min-width: 80px;
+    }
+
+    .savings-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: #E5E7EB;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .savings-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #10B981, #34D399);
+      border-radius: 10px;
+      width: 0%;
+      transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .savings-percent {
+      font-weight: 900;
+      color: #10B981;
+      font-size: 1rem;
+      min-width: 48px;
+      text-align: right;
+    }
+
+    .savings-tag {
+      display: inline-block;
+      background: #D1FAE5;
+      color: #065F46;
+      font-weight: 800;
+      padding: 2px 12px;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      white-space: nowrap;
+    }
+
+    /* Callout Box */
+    .callout-box {
+      background: linear-gradient(135deg, #23376e, #1a2a56);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      margin: 30px 0 0 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .callout-box .icon {
+      font-size: 2.4rem;
+      color: var(--secondary-yellow);
+    }
+
+    .callout-box .text {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .callout-box .text span {
+      color: var(--secondary-yellow);
+    }
+
+    /* ==========================================================================
+       6. SUBSCRIPTION PLANS
+       ========================================================================== */
+    .plans-section {
+      padding: 68px 0;
+      background: #FFFFFF;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .plan-card {
+      background: var(--bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      border: 2px solid var(--border-color);
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--hover-shadow);
+    }
+
+    .plan-card.featured {
+      border-color: var(--secondary-yellow);
+      background: #FFFFFF;
+      box-shadow: var(--hover-shadow);
+    }
+
+    .plan-card.featured .plan-badge {
+      display: inline-block;
+    }
+
+    .plan-badge {
+      display: none;
+      background: var(--secondary-yellow);
+      color: var(--primary-blue);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 3px 14px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .plan-name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+    }
+
+    .plan-price {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--primary-blue);
+      margin: 12px 0 4px 0;
+    }
+
+    .plan-price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-light);
+    }
+
+    .plan-savings {
+      color: #10B981;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+
+    .plan-features {
+      list-style: none;
+      text-align: left;
+      margin: 16px 0 20px 0;
+      padding: 0;
+    }
+
+    .plan-features li {
+      padding: 8px 0;
+      border-bottom: 1px solid #E5E7EB;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-features li:last-child {
+      border-bottom: none;
+    }
+
+    .plan-features li i {
+      color: #10B981;
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       7. PRESCRIPTION UPLOAD FORM (NEW)
+       ========================================================================== */
+    .prescription-section {
+      padding: 68px 0;
+      background: #FFFFFF;
+    }
+
+    .prescription-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .prescription-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .prescription-header h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      margin-bottom: 8px;
+    }
+
+    .prescription-header h2 span {
+      color: var(--secondary-yellow);
+    }
+
+    .prescription-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Contact Cards */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      background: var(--bg-soft);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border-color);
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-item .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-light);
+      font-weight: 700;
+    }
+
+    .contact-item .name {
+      font-weight: 700;
+      color: var(--primary-blue);
+      font-size: 1rem;
+    }
+
+    .contact-item .phone {
+      color: var(--primary-blue);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .contact-item .phone:hover {
+      text-decoration: underline;
+    }
+
+    /* Form Card */
+    .form-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--primary-blue);
+      margin-bottom: 6px;
+    }
+
+    .form-label .required {
+      color: #EF4444;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: var(--text-main);
+      background: var(--bg-soft);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-blue);
+      box-shadow: 0 0 0 4px rgba(35, 55, 110, 0.08);
+      background: #FFFFFF;
+    }
+
+    .form-control::placeholder {
+      color: var(--text-light);
+    }
+
+    select.form-control {
+      appearance: auto;
+      cursor: pointer;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .phone-input-group {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 10px;
+    }
+
+    .phone-input-group .form-control {
+      padding: 12px 12px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    /* File Upload Area */
+    .file-upload-area {
+      border: 2px dashed var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 30px 20px;
+      text-align: center;
+      background: var(--bg-soft);
+      cursor: pointer;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .file-upload-area:hover {
+      border-color: var(--primary-blue);
+      background: #FAFAFA;
+    }
+
+    .file-upload-area .upload-icon {
+      font-size: 2.8rem;
+      color: var(--primary-blue);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .file-upload-area .upload-text {
+      font-weight: 700;
+      color: var(--primary-blue);
+      font-size: 1rem;
+    }
+
+    .file-upload-area .upload-hint {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    .file-upload-area .file-types {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .file-upload-area .file-types span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #FFFFFF;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .file-upload-area input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .file-upload-area .file-name {
+      display: none;
+      margin-top: 12px;
+      font-weight: 700;
+      color: var(--success-green);
+      background: #D1FAE5;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+    }
+
+    .file-upload-area .file-name.show {
+      display: inline-block;
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--secondary-yellow);
+      color: var(--primary-blue);
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-submit:hover {
+      background: #f0b243;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 195, 90, 0.4);
+    }
+
+    .btn-submit i {
+      font-size: 1.2rem;
+    }
+
+    /* ==========================================================================
+       8. HOW IT WORKS
+       ========================================================================== */
+    .how-it-works {
+      padding: 68px 0;
+      background: var(--bg-soft);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+      height: 100%;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--hover-shadow);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: var(--primary-blue);
+      color: var(--secondary-yellow);
+      font-size: 1.3rem;
+      font-weight: 900;
+      border-radius: 50%;
+      margin-bottom: 14px;
+    }
+
+    .step-title {
+      font-weight: 800;
+      color: var(--primary-blue);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       9. FAQ SECTION
+       ========================================================================== */
+    .faq-section {
+      padding: 68px 0;
+      background: #FFFFFF;
+    }
+
+    .faq-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--bg-soft);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 18px 24px;
+      font-weight: 700;
+      color: var(--primary-blue);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      background: #F5EDDD;
+    }
+
+    .faq-question .icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .faq-question.active .icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .faq-answer.open {
+      padding: 0 24px 20px 24px;
+      max-height: 300px;
+    }
+
+    /* ==========================================================================
+       10. FINAL CTA
+       ========================================================================== */
+    .final-cta {
+      padding: 68px 0;
+      background: linear-gradient(135deg, rgba(87, 117, 186, 0.95), rgba(70, 126, 238, 0.98)), 
+                  url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .final-cta h2 span {
+      color: var(--secondary-yellow);
+    }
+
+    .final-cta p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      margin: 0 auto 28px auto;
+    }
+
+   /* ==========================================================================
+   11. FOOTER SECTION
+   ========================================================================== */
+
+.site-footer {
+    background: #23376e;
+    color: #FFFFFF;
+    padding: 70px 0 30px 0;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-brand-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-yellow);
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #FFFFFF;
+}
+
+.footer-contact-item i {
+    color: var(--secondary-yellow);
+    margin-top: 4px;
+}
+
+/* ===== REMOVE UNDERLINE FROM CONTACT LINKS (PHONE & EMAIL) ===== */
+.footer-contact-item a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-contact-item a:hover {
+    color: var(--secondary-yellow);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.88rem;
+    color: #FFFFFF;
+}
+
+.footer-bottom a {
+    color: var(--secondary-yellow);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #FFFFFF;
+}
+
+.footer-social-group {
+    margin-top: 20px;
+}
+
+.footer-social-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 10px;
+}
+
+.social-icons-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 195, 90, 0.35);
+    text-decoration: none;
+}
+
+.social-icon-btn:hover {
+    background: var(--secondary-yellow);
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 195, 90, 0.35);
+}
+    /* ==========================================================================
+       12. MOBILE RESPONSIVE
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .advantage-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 75px;
+      }
+
+      .site-header {
+        height: 75px;
+      }
+
+      .logo-img {
+        height: 50px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .drawer-toggle-btn {
+        display: flex;
+      }
+
+      .subscription-hero {
+        min-height: 400px;
+        padding: 40px 0;
+      }
+
+      .subscription-hero-title {
+        font-size: 1.8rem;
+      }
+
+      .subscription-hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .hero-badges {
+        gap: 10px;
+      }
+
+      .hero-badge {
+        font-size: 0.7rem;
+        padding: 6px 14px;
+      }
+
+      .advantage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .comparison-table {
+        font-size: 0.8rem;
+        min-width: 600px;
+      }
+
+      .comparison-table thead th,
+      .comparison-table tbody td {
+        padding: 10px 12px;
+      }
+
+      .callout-box {
+        padding: 20px;
+      }
+
+      .callout-box .icon {
+        font-size: 1.8rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 16px;
+      }
+
+      .form-card {
+        padding: 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .phone-input-group {
+        grid-template-columns: 80px 1fr;
+      }
+
+      .prescription-header h2 {
+        font-size: 1.5rem;
+      }
+
+      .file-upload-area {
+        padding: 20px 16px;
+      }
+
+      .file-upload-area .file-types {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      
+    }
+
+    @media (max-width: 480px) {
+      .subscription-hero-title {
+        font-size: 1.4rem;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .plan-price {
+        font-size: 2.2rem;
+      }
+
+      .final-cta h2 {
+        font-size: 1.6rem;
+      }
+
+      .comparison-table {
+        font-size: 0.7rem;
+        min-width: 500px;
+      }
+
+      .comparison-table thead th,
+      .comparison-table tbody td {
+        padding: 8px 10px;
+      }
+
+      .savings-percent {
+        font-size: 0.8rem;
+        min-width: 36px;
+      }
+
+      .file-upload-area .upload-icon {
+        font-size: 2rem;
+      }
+
+      .file-upload-area .upload-text {
+        font-size: 0.9rem;
+      }
+
+      .form-card {
+        padding: 16px;
+      }
+
+      .contact-grid {
+        padding: 12px;
+      }
+
+      .contact-item .name {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+ <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="brand-logo-group">
+                <img src="https://vikashsaran04.github.io/sudamaglobalhealth.com/logo.jpg"
+                    alt="Sudama Global Health Logo" class="logo-img"
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=100&auto=format&fit=crop&q=80';">
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="index.html#treatments" class="nav-link" data-i18n="nav_treatments">Treatments</a>
+                <a href="index.html#process" class="nav-link" data-i18n="nav_process">Process</a>
+                <a href="index.html#hospitals" class="nav-link" data-i18n="nav_hospitals">Hospitals</a>
+                <!-- <a href="#doctors" class="nav-link" data-i18n="nav_doctors">Doctors</a> -->
+                <a href="index.html#appointment" class="nav-link" data-i18n="nav_contact">Help/Contact</a>
+                <!-- <a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a> -->
+                <a href="facilitator-partnership-progra.html" class="nav-link"
+                    data-i18n="nav_Partnership Program">Partnership Program</a>
+                <a href="subscription.html" class="nav-link" data-i18n="nav_subscription"> Health club</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Circular Language Selector -->
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="langBtn" aria-label="Select Language">
+                        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon" id="currentFlag">
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <div class="lang-option"
+                            onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png', 'ltr')">
+                            <img src="https://flagcdn.com/w40/us.png" alt="US Flag" class="flag-icon"> English
+                        </div>
+                        <div class="lang-option"
+                            onclick="changeLanguage('fr', 'https://flagcdn.com/w40/fr.png', 'ltr')">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="France Flag" class="flag-icon"> Français
+                        </div>
+                        <div class="lang-option"
+                            onclick="changeLanguage('ar', 'https://flagcdn.com/w40/sa.png', 'rtl')">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Flag" class="flag-icon"> العربية
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Professional Drawer Toggle Button -->
+                <button class="drawer-toggle-btn" id="drawerToggleBtn" aria-label="Open Navigation Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Glassmorphic Mobile/Desktop Drawer Menu -->
+    <div class="drawer-overlay" id="drawerOverlay">
+        <div class="drawer-menu">
+            <div class="drawer-header">
+                <div class="brand-name">Sudama <span class="brand-highlight">Health</span></div>
+                <div class="drawer-close" id="drawerClose">&times;</div>
+            </div>
+            <div class="drawer-links">
+                <a href="index.html" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-house"></i> <span
+                        data-i18n="nav_home">Home</span></a>
+                <a href="index.html#treatments" class="drawer-link" onclick="closeDrawer()"><i
+                        class="fa-solid fa-stethoscope"></i> <span data-i18n="nav_treatments">Treatments</span></a>
+                <a href="index.html#process" class="drawer-link" onclick="closeDrawer()"><i
+                        class="fa-solid fa-clipboard-list"></i> <span data-i18n="nav_process">Process</span></a>
+                <a href="index.html#hospitals" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-hospital"></i>
+                    <span data-i18n="nav_hospitals">Hospitals</span></a>
+                <a href="index.html#doctors" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-user-doctor"></i>
+                    <span data-i18n="nav_doctors">Doctors</span></a>
+                <a href="index.html#appointment" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-headset"></i>
+                    <span data-i18n="nav_contact">Help & Contact</span></a>
+                <a href="blog.html" class="drawer-link"><i class="fa-solid fa-newspaper"></i> <span
+                        data-i18n="nav_blog">Blogs</span></a>
+                <a href="facilitator-partnership-progra.html" class="drawer-link active"><i
+                        class="fa-solid fa-handshake-simple"></i> <span data-i18n="nav_partnership">Partnership
+                        Program</span></a>
+                <a href="subscription.html" class="drawer-link active" onclick="closeDrawer()"><i
+                        class="fa-solid fa-crown"></i> <span data-i18n="nav_subscription"> Health club</span></a>
+                <a href="subscription.html" class="drawer-link" onclick="closeDrawer()">
+                    <!-- <i class="fa-solid fa-crown"></i> <span data-i18n="nav_subscription">Subscription</span> -->
+                </a>
+            </div>
+        </div>
+    </div>
+
+  <!-- ===== HERO SECTION WITH VIDEO BACKGROUND ===== -->
+  <section class="subscription-hero">
+    <!-- Video Background -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="subscriptionVideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container subscription-hero-content">
+      <div class="hero-badge-pill">
+        <i class="fa-solid fa-india"></i> The India Advantage
+      </div>
+      <h1 class="subscription-hero-title">
+        Why Pay More When <span>India Has the Best?</span>
+      </h1>
+      <p class="subscription-hero-subtitle">
+        We source directly from India's top-tier pharmaceutical manufacturers and medical device hubs. Get WHO-GMP certified medicines and equipment at 50–80% lower than local market rates.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#plans" class="btn btn-primary">
+          <i class="fa-solid fa-crown"></i> Join for $20/month
+        </a>
+        <a href="https://wa.me/917020753181" target="_blank" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Get a Free Quote via WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-badges">
+        <span class="hero-badge"><i class="fa-solid fa-india"></i> Sourced from India</span>
+        <span class="hero-badge"><i class="fa-solid fa-certificate"></i> WHO-GMP Certified</span>
+        <span class="hero-badge"><i class="fa-solid fa-globe"></i> Global Shipping</span>
+        <span class="hero-badge"><i class="fa-solid fa-clock"></i> 24-Hour Quote Guarantee</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INDIA ADVANTAGE SECTION ===== -->
+  <section class="india-advantage">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">Direct from the Source</div>
+        <h2 class="section-title">The India Advantage – Why Us?</h2>
+        <p class="section-desc">India is the "Pharmacy of the World." We leverage this advantage to bring you the best quality at the lowest cost.</p>
+      </div>
+
+      <div class="advantage-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <h3 class="advantage-title">Direct Sourcing</h3>
+          <p class="advantage-desc">We cut out the middlemen. We buy directly from Indian manufacturers and authorized distributors.</p>
+          <span class="advantage-stat">No Middlemen</span>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fa-solid fa-check-double"></i></div>
+          <h3 class="advantage-title">WHO-GMP Quality</h3>
+          <p class="advantage-desc">All medicines are sourced from facilities certified by the World Health Organization (WHO) and Good Manufacturing Practices (GMP).</p>
+          <span class="advantage-stat">Global Standard</span>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3 class="advantage-title">Generic Excellence</h3>
+          <p class="advantage-desc">India produces over 80% of the global demand for vaccines and 50% of all generic medicines. You get the same active ingredients, just at a fraction of the price.</p>
+          <span class="advantage-stat">80% Global Supply</span>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon"><i class="fa-solid fa-hospital-user"></i></div>
+          <h3 class="advantage-title">Medical Tourism Hub</h3>
+          <p class="advantage-desc">Just as India attracts patients for surgeries, we now offer the products that support global health, from chronic care drugs to advanced medical equipment.</p>
+          <span class="advantage-stat">World-Class Care</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPARISON CHART WITH ANIMATION ===== -->
+  <section class="comparison-section" id="comparison-chart">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">Compare & Save</div>
+        <h2 class="section-title">Pay 95% Less for the Same Quality Medicine</h2>
+        <p class="section-desc">Indian pharmaceutical brands are exported globally. Get them directly from the source, without the middleman markup.</p>
+      </div>
+
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Medicine</th>
+              <th>Use</th>
+              <th>International Price</th>
+              <th>India Market Price</th>
+              <th style="text-align: right;">You Save</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonBody">
+            <!-- Data will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Callout Box -->
+      <div class="callout-box">
+        <div class="icon">🌍</div>
+        <div class="text">
+          <strong>Global Standard, Local Price</strong><br>
+          Most "International" brands are manufactured in India. When you buy through Sudama, you pay the <span>factory direct price</span> for high-quality, WHO-certified medicines.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUBSCRIPTION PLANS ===== -->
+  <section class="plans-section" id="plans">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">The "1+1" Benefit Plan</div>
+        <h2 class="section-title">Start Saving Today</h2>
+        <p class="section-desc">For just $20/month, you unlock our Indian-source pricing and get your first medicine free!</p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Standard Plan -->
+        <div class="plan-card">
+          <div class="plan-badge">Popular</div>
+          <div class="plan-name">Standard Plan</div>
+          <div class="plan-price">$20 <span>/ month</span></div>
+          <div class="plan-savings">✨ 1 Medicine Free Every Month</div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> 1 Medicine at MRP (Free)</li>
+            <li><i class="fa-solid fa-check"></i> Discounted rates on all other items</li>
+            <li><i class="fa-solid fa-check"></i> 24-Hour Quote Guarantee</li>
+            <li><i class="fa-solid fa-check"></i> WhatsApp Support</li>
+          </ul>
+          <a href="pages/checkout.html?plan=standard&amount=2000" class="btn btn-primary" style="width:100%;">
+            <i class="fa-solid fa-crown"></i> Subscribe Now — $20
+          </a>
+        </div>
+
+        <!-- Annual Plan -->
+        <div class="plan-card featured">
+          <div class="plan-badge">⭐ Best Value</div>
+          <div class="plan-name">Annual Plan</div>
+          <div class="plan-price">$192 <span>/ year</span></div>
+          <div class="plan-savings">🔥 Save 20% — Just $16/month!</div>
+          <ul class="plan-features">
+            <li><i class="fa-solid fa-check"></i> Everything in Standard</li>
+            <li><i class="fa-solid fa-check"></i> Priority Shipping (Fast-track Air Cargo)</li>
+            <li><i class="fa-solid fa-check"></i> Dedicated Account Manager</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Save $48/year</strong></li>
+          </ul>
+          <a href="pages/checkout.html?plan=annual&amount=19200" class="btn btn-success" style="width:100%;">
+            <i class="fa-solid fa-crown"></i> Subscribe Now — $192
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRESCRIPTION UPLOAD FORM ===== -->
+  <section class="prescription-section" id="prescription-form">
+    <div class="container">
+      <div class="prescription-wrapper">
+
+        <!-- Header -->
+        <div class="prescription-header">
+          <h2>📄 Upload Prescription & <span>Get a Free Quote</span> in 24 Hours</h2>
+          <p>Submit your prescription or medical documents and our team will get back to you with a personalized quote.</p>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="contact-grid">
+          <div class="contact-item">
+            <span class="label">Founder &amp; CEO</span>
+            <span class="name">Abhijeet Borade</span>
+            <a href="tel:+917020753181" class="phone">📞 +91 70207 53181</a>
+          </div>
+          <div class="contact-item">
+            <span class="label">Co-Founder</span>
+            <span class="name">Amol Badad</span>
+            <a href="tel:+917030643132" class="phone">📞 +91 70306 43132</a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-card">
+          <form id="prescriptionForm" onsubmit="handlePrescriptionSubmit(event)">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="category">Category / Role <span class="required">*</span></label>
+                <select id="category" class="form-control" required>
+                  <option value="" disabled selected>Select role...</option>
+                  <option value="Patient">Patient</option>
+                  <option value="Caregiver">Caregiver / Family Member</option>
+                  <option value="Healthcare Professional">Healthcare Professional</option>
+                  <option value="Clinic / Hospital">Clinic / Hospital</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="mobile">Mobile Number (WhatsApp) <span class="required">*</span></label>
+                <div class="phone-input-group">
+                  <input type="text" id="phoneCode" class="form-control" placeholder="+91" value="+91" required>
+                  <input type="tel" id="mobile" class="form-control" placeholder="Mobile number" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" class="form-control" placeholder="name@domain.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="country">Country <span class="required">*</span></label>
+              <input type="text" id="country" class="form-control" placeholder="e.g. Kenya, UAE, Oman, UK" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="description">Description <span class="required">*</span></label>
+              <textarea id="description" class="form-control" placeholder="Tell us about your healthcare needs, conditions, or any special requirements..." required></textarea>
+            </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+              <label class="form-label">Upload Prescription or Medical Documents <span class="required">*</span></label>
+              <div class="file-upload-area" id="fileUploadArea">
+                <span class="upload-icon">📎</span>
+                <div class="upload-text">Click or drag to upload your files</div>
+                <div class="upload-hint">Upload your prescription, medical reports, or diagnostic images</div>
+                <div class="file-types">
+                  <span><i class="fa-regular fa-file-pdf"></i> PDF</span>
+                  <span><i class="fa-regular fa-image"></i> JPG / PNG</span>
+                  <span><i class="fa-regular fa-file-video"></i> MP4 / MOV</span>
+                </div>
+                <div class="file-name" id="fileName">✅ File uploaded successfully</div>
+                <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png,.gif,.mp4,.mov,.avi,.mkv" required>
+              </div>
+              <p style="font-size:0.8rem; color:var(--text-light); margin-top:6px;">
+                <i class="fa-solid fa-info-circle"></i> Supported formats: PDF, JPG, PNG, GIF, MP4, MOV, AVI, MKV (Max 20MB)
+              </p>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-paper-plane"></i> Submit & Get Free Quote
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">Simple 4-Step Process</div>
+        <h2 class="section-title">How It Works</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">Upload Your Prescription</div>
+          <div class="step-desc">Send a clear photo of your doctor's prescription or a list of medical equipment you need to our WhatsApp number or upload here.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">Instant Quote (Within 24 Hours)</div>
+          <div class="step-desc">Our Indian medical team verifies requirements, checks stock availability in India, and sources the best price.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">Confirm & Pay</div>
+          <div class="step-desc">If the quote works for you, confirm via WhatsApp. We provide a secure payment link.</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-title">Fast Delivery</div>
+          <div class="step-desc">We ship your medicines and equipment via secure air cargo partners from India to your country. Track in real-time.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <div class="section-subtitle">Frequently Asked Questions</div>
+        <h2 class="section-title">Got Questions? We've Got Answers</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            Are the medicines from India safe?
+            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            Yes. All our sources are WHO-GMP certified. India is the world's largest provider of generic drugs, used by top hospitals globally.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How long does delivery take?
+            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            Typically 3–7 business days via air cargo, depending on your country's customs clearance.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            What if the medicine is not available in India?
+            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            We will inform you within 24 hours and suggest an alternative available brand or source it from another country if needed.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            How do I upload my prescription?
+            <span class="icon"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-answer">
+            Simply take a photo and send it to our WhatsApp Business number: <strong>+91 70207 53181</strong> or use the upload form above.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Start Saving Today</h2>
+      <p>Join thousands of patients who trust Sudama Global Health for affordable, transparent medical care from India.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="#plans" class="btn btn-primary">
+          <i class="fa-solid fa-crown"></i> Join for $20/month
+        </a>
+        <a href="https://wa.me/917020753181" target="_blank" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+      <p style="margin-top: 16px; font-size: 0.85rem; opacity: 0.7;">Cancel anytime. No contract.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand & Address -->
+                <div>
+                    <div class="footer-brand-title">Sudama Global <span style="color:var(--accent-green);">Health</span>
+                    </div>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">
+                        India's premier medical tourism facilitation organization supporting international patients with
+                        end-to-end healthcare coordination, visa assistance, and hospital stays.
+                    </p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Sai bungalow, Indiranagar, Nashik, Maharashtra, India - 422009</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#treatments">Treatments</a></li>
+                        <li><a href="index.html#process">Process</a></li>
+                        <li><a href="index.html#hospitals">Hospitals</a></li>
+                        <li><a href="index.html#doctors">Doctors</a></li>
+                        <li><a href="index.html#appointment">Help & Contact</a></li>
+                        <li><a href="blog.html"> Blogs</a></li>
+                        <li><a href="subscription.html">Health Cub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="footer-title">Contact & Support</h4>
+                    <!-- Abhijeet Borade - WhatsApp & Call -->
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Abhijeet Borade (CEO)</div>
+                            <a href="https://wa.me/917020753181" target="_blank"
+                                style="color: #FFFFFF; font-weight: 700;">+91 7020753181</a>
+                        </div>
+                    </div>
+                    <!-- Amol Badad - WhatsApp & Call -->
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Amol Badad (Co-Founder)</div>
+                            <a href="https://wa.me/917030643132" target="_blank"
+                                style="color: #FFFFFF; font-weight: 700;">+91 7030643132</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:contact@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">contact@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+                     <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:info@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">info@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:Amol@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">Amol@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="footer-social-group">
+                <div class="footer-social-title">Follow Us</div>
+                <div class="social-icons-list">
+                    <a href="https://www.instagram.com/sudamaglobal.health?igsh=MXM1dzh2anU0MG55Mw%3D%3D&utm_source=qr"
+                        target="_blank" class="social-icon-btn" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1JP7JDQgjq/?mibextid=wwXIfr" target="_blank"
+                        class="social-icon-btn" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/sudamaglobaltrade/" target="_blank"
+                        class="social-icon-btn" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/917020753181" target="_blank" class="social-icon-btn" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 Sudama Global Health. All Rights Reserved.</div>
+                <div>Design & Development by <a href="https://www.linkedin.com/in/jayeshjadhav11" target="_blank">Jayesh Jadhav</a></div>
+            </div>
+        </div>
+    </footer>
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== DRAWER NAVIGATION =====
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerToggleBtn = document.getElementById('drawerToggleBtn');
+    const drawerClose = document.getElementById('drawerClose');
+
+    if (drawerToggleBtn) {
+      drawerToggleBtn.addEventListener('click', () => {
+        drawerOverlay.classList.add('active');
+      });
+    }
+
+    if (drawerClose) {
+      drawerClose.addEventListener('click', () => {
+        drawerOverlay.classList.remove('active');
+      });
+    }
+
+    if (drawerOverlay) {
+      drawerOverlay.addEventListener('click', (e) => {
+        if (e.target === drawerOverlay) {
+          drawerOverlay.classList.remove('active');
+        }
+      });
+    }
+
+    // ===== FAQ TOGGLE =====
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const isActive = answer.classList.contains('open');
+      
+      // Close all FAQs
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+      
+      // Open clicked FAQ if it was closed
+      if (!isActive) {
+        answer.classList.add('open');
+        element.classList.add('active');
+      }
+    }
+
+    // ===== FILE UPLOAD - SHOW FILE NAME =====
+    const fileInput = document.getElementById('fileUpload');
+    const fileNameDisplay = document.getElementById('fileName');
+    const uploadArea = document.getElementById('fileUploadArea');
+
+    if (fileInput) {
+      fileInput.addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+          const file = this.files[0];
+          const fileSize = (file.size / 1024 / 1024).toFixed(2);
+          fileNameDisplay.textContent = '✅ ' + file.name + ' (' + fileSize + ' MB)';
+          fileNameDisplay.classList.add('show');
+          uploadArea.querySelector('.upload-text').textContent = 'File selected';
+          uploadArea.querySelector('.upload-hint').textContent = 'Click to change file';
+        } else {
+          fileNameDisplay.classList.remove('show');
+          uploadArea.querySelector('.upload-text').textContent = 'Click or drag to upload your files';
+          uploadArea.querySelector('.upload-hint').textContent = 'Upload your prescription, medical reports, or diagnostic images';
+        }
+      });
+    }
+
+    // ===== FORM SUBMISSION =====
+    function handlePrescriptionSubmit(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('fullName').value.trim();
+      const category = document.getElementById('category').value;
+      const phoneCode = document.getElementById('phoneCode').value.trim();
+      const mobile = document.getElementById('mobile').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const description = document.getElementById('description').value.trim();
+      const file = document.getElementById('fileUpload').files[0];
+
+      // Validate
+      if (!name || !category || !mobile || !email || !country || !description) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      if (!file) {
+        alert('Please upload your prescription or medical document.');
+        return;
+      }
+
+      // Build WhatsApp message
+      let message = '*New Prescription Upload - Quote Request*%0A%0A';
+      message += `*Name:* ${encodeURIComponent(name)}%0A`;
+      message += `*Role:* ${encodeURIComponent(category)}%0A`;
+      message += `*Country:* ${encodeURIComponent(country)}%0A`;
+      message += `*Phone:* ${encodeURIComponent(phoneCode + ' ' + mobile)}%0A`;
+      message += `*Email:* ${encodeURIComponent(email)}%0A`;
+      message += `*Description:* ${encodeURIComponent(description)}%0A%0A`;
+      
+      if (file) {
+        message += `*File Uploaded:* ${encodeURIComponent(file.name)} (${(file.size / 1024 / 1024).toFixed(2)} MB)%0A`;
+        message += `*Note:* Please send the file separately via WhatsApp or email.`;
+      }
+
+      // Open WhatsApp with message
+      window.open(`https://wa.me/917020753181?text=${message}`, '_blank');
+
+      // Show success message
+      alert('✅ Your prescription has been submitted! Our team will contact you within 24 hours with a free quote.');
+      
+      // Reset form
+      document.getElementById('prescriptionForm').reset();
+      fileNameDisplay.classList.remove('show');
+      uploadArea.querySelector('.upload-text').textContent = 'Click or drag to upload your files';
+      uploadArea.querySelector('.upload-hint').textContent = 'Upload your prescription, medical reports, or diagnostic images';
+    }
+
+    // ===== COMPARISON CHART DATA =====
+    const comparisonData = [
+      { medicine: "Atorvastatin", use: "Cholesterol", international: "$120.00", india: "$2.00 - $6.00", savings: 96 },
+      { medicine: "Metformin", use: "Diabetes", international: "$80.00", india: "$1.00 - $3.00", savings: 97 },
+      { medicine: "Amlodipine", use: "Hypertension", international: "$100.00", india: "$1.50 - $4.00", savings: 96 },
+      { medicine: "Omeprazole", use: "Acid Reflux", international: "$150.00", india: "$2.00 - $6.00", savings: 97 },
+      { medicine: "Levothyroxine", use: "Thyroid", international: "$180.00", india: "$4.00 - $8.00", savings: 96 },
+      { medicine: "Gabapentin", use: "Nerve Pain", international: "$200.00", india: "$3.00 - $7.00", savings: 96 },
+      { medicine: "Pantoprazole", use: "Stomach Ulcers", international: "$160.00", india: "$2.50 - $6.00", savings: 97 },
+      { medicine: "Clopidogrel", use: "Blood Thinner", international: "$300.00", india: "$4.00 - $8.00", savings: 97 },
+      { medicine: "Losartan", use: "Hypertension", international: "$140.00", india: "$2.00 - $5.00", savings: 96 },
+      { medicine: "Sertraline", use: "Depression", international: "$250.00", india: "$3.00 - $7.00", savings: 98 },
+      { medicine: "Escitalopram", use: "Anxiety", international: "$280.00", india: "$4.00 - $9.00", savings: 97 },
+      { medicine: "Montelukast", use: "Asthma/Allergy", international: "$200.00", india: "$3.00 - $7.00", savings: 97 },
+      { medicine: "Salbutamol Inhaler", use: "Asthma Rescue", international: "$25.00", india: "$4.00 - $10.00", savings: 80 },
+      { medicine: "Insulin Glargine", use: "Diabetes", international: "$150.00 - $300.00", india: "$12.00 - $25.00", savings: 92 },
+      { medicine: "Amoxicillin", use: "Infection", international: "$50.00", india: "$2.00 - $5.00", savings: 95 },
+      { medicine: "Azithromycin", use: "Antibiotic", international: "$60.00", india: "$3.00 - $7.00", savings: 95 },
+      { medicine: "Prednisolone", use: "Inflammation", international: "$40.00", india: "$2.00 - $4.00", savings: 95 },
+      { medicine: "Hydrochlorothiazide", use: "Hypertension", international: "$30.00", india: "$1.50 - $4.00", savings: 95 },
+      { medicine: "Doxycycline", use: "Antibiotic", international: "$80.00", india: "$3.00 - $6.00", savings: 95 },
+      { medicine: "Cetirizine", use: "Allergies", international: "$20.00", india: "$1.50 - $4.00", savings: 92 },
+      { medicine: "Furosemide", use: "Heart Failure", international: "$30.00", india: "$2.00 - $5.00", savings: 93 },
+      { medicine: "Carvedilol", use: "Heart Failure", international: "$100.00", india: "$3.00 - $8.00", savings: 95 },
+      { medicine: "Tramadol", use: "Pain Relief", international: "$60.00", india: "$4.00 - $10.00", savings: 90 }
+    ];
+
+    // ===== POPULATE COMPARISON TABLE =====
+    function populateTable() {
+      const tbody = document.getElementById('comparisonBody');
+      tbody.innerHTML = '';
+
+      comparisonData.forEach((item) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="medicine-name">${item.medicine}</td>
+          <td class="use-case">${item.use}</td>
+          <td class="international-price">${item.international}</td>
+          <td class="india-price">${item.india}</td>
+          <td>
+            <div class="savings-cell">
+              <span class="savings-tag">Save</span>
+              <div class="savings-bar-wrapper">
+                <div class="savings-bar-bg">
+                  <div class="savings-bar-fill" data-savings="${item.savings}" style="width: 0%;"></div>
+                </div>
+              </div>
+              <span class="savings-percent" data-target="${item.savings}">0%</span>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // ===== ANIMATE SAVINGS BARS =====
+    function animateSavings() {
+      const bars = document.querySelectorAll('.savings-bar-fill');
+      const percentElements = document.querySelectorAll('.savings-percent');
+
+      bars.forEach((bar, index) => {
+        const target = parseInt(bar.dataset.savings);
+        const percentEl = percentElements[index];
+        
+        // Reset to 0 first
+        bar.style.width = '0%';
+        percentEl.textContent = '0%';
+        
+        // Animate bar width
+        setTimeout(() => {
+          bar.style.width = target + '%';
+        }, 300 + (index * 80));
+        
+        // Animate percentage counter
+        let current = 0;
+        const increment = Math.max(1, Math.ceil(target / 60));
+        const interval = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(interval);
+          }
+          percentEl.textContent = current + '%';
+        }, 25 + (index * 3));
+      });
+    }
+
+    // ===== RESET ALL SAVINGS BARS =====
+    function resetSavings() {
+      document.querySelectorAll('.savings-bar-fill').forEach(bar => {
+        bar.style.width = '0%';
+      });
+      document.querySelectorAll('.savings-percent').forEach(el => {
+        el.textContent = '0%';
+      });
+    }
+
+    // ===== INTERSECTION OBSERVER FOR ANIMATION =====
+    let isAnimating = false;
+    let animationTimeout = null;
+
+    function setupIntersectionObserver() {
+      const section = document.querySelector('.comparison-section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !isAnimating) {
+            // Reset everything first
+            resetSavings();
+            
+            // Clear any existing timeout
+            if (animationTimeout) {
+              clearTimeout(animationTimeout);
+            }
+            
+            // Start animation after a small delay
+            isAnimating = true;
+            animationTimeout = setTimeout(() => {
+              animateSavings();
+              // Reset flag after animation completes (approx 3 seconds)
+              setTimeout(() => {
+                isAnimating = false;
+              }, 3500);
+            }, 400);
+          } else if (!entry.isIntersecting) {
+            // When leaving viewport, reset but keep flag false
+            resetSavings();
+            if (animationTimeout) {
+              clearTimeout(animationTimeout);
+              animationTimeout = null;
+            }
+            isAnimating = false;
+          }
+        });
+      }, { 
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      observer.observe(section);
+    }
+
+    // ===== INITIALIZE =====
+    document.addEventListener('DOMContentLoaded', function() {
+      populateTable();
+      setupIntersectionObserver();
+    });
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+</body>
+</html>

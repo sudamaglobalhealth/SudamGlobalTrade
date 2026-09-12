@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Checkout | Sudama Global Health</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Razorpay Checkout JS -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #FEF8EA;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .checkout-container {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(35, 55, 110, 0.12);
+            border: 1px solid #E6DFD3;
+        }
+        
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo-section img {
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        
+        .logo-section h2 {
+            color: #23376e;
+            font-size: 1.3rem;
+        }
+        
+        .logo-section .tagline {
+            color: #6e7d9f;
+            font-size: 0.85rem;
+        }
+        
+        .payment-summary {
+            background: #FEF8EA;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+            border: 1px solid #E6DFD3;
+        }
+        
+        .payment-summary .label {
+            color: #6e7d9f;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .payment-summary .amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #23376e;
+        }
+        
+        .payment-summary .treatment {
+            color: #3d4f7c;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #23376e;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid #E6DFD3;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: #FAFAFA;
+            transition: 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #23376e;
+            box-shadow: 0 0 0 4px rgba(35, 55, 110, 0.08);
+            background: #FFFFFF;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .btn-pay {
+            width: 100%;
+            padding: 16px;
+            background: #ffc35a;
+            color: #23376e;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        
+        .btn-pay:hover {
+            background: #f0b243;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 195, 90, 0.4);
+        }
+        
+        .btn-pay:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-pay i {
+            font-size: 1.2rem;
+        }
+        
+        .secure-badge {
+            text-align: center;
+            margin-top: 16px;
+            color: #6e7d9f;
+            font-size: 0.8rem;
+        }
+        
+        .secure-badge i {
+            color: #10B981;
+        }
+        
+        .loading {
+            display: none;
+        }
+        
+        .loading.show {
+            display: inline-block;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            background: #FEF2F2;
+            border: 1px solid #FCA5A5;
+            color: #991B1B;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            display: none;
+            margin-bottom: 16px;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Success state */
+        .payment-success {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .payment-success .icon {
+            font-size: 4rem;
+            color: #10B981;
+            margin-bottom: 16px;
+        }
+        
+        .payment-success h2 {
+            color: #23376e;
+            margin-bottom: 8px;
+        }
+        
+        .payment-success p {
+            color: #6e7d9f;
+        }
+        
+        @media (max-width: 480px) {
+            .checkout-container {
+                padding: 24px;
+            }
+            
+            .payment-summary .amount {
+                font-size: 1.8rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container" id="checkoutContainer">
+        <!-- Logo -->
+        <div class="logo-section">
+            <img src="https://vikashsaran04.github.io/sudamaglobalhealth.com/logo.jpg" alt="Sudama Global Health" style="height:60px;">
+            <h2>Secure Checkout</h2>
+            <p class="tagline">Complete your payment to confirm your subscription</p>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage">
+            <i class="fa-solid fa-circle-exclamation"></i> 
+            <span id="errorText">Please fix the errors above</span>
+        </div>
+        
+        <!-- Payment Summary -->
+        <div class="payment-summary">
+            <div class="label">Amount to Pay</div>
+            <div class="amount" id="displayAmount">$20</div>
+            <div class="treatment" id="displayTreatment">Standard Plan - Monthly Subscription</div>
+        </div>
+        
+        <!-- Patient Details Form -->
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="patientName">Full Name <span style="color:#EF4444;">*</span></label>
+                <input type="text" id="patientName" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="patientEmail">Email Address <span style="color:#EF4444;">*</span></label>
+                    <input type="email" id="patientEmail" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="patientPhone">Phone Number <span style="color:#EF4444;">*</span></label>
+                    <input type="tel" id="patientPhone" placeholder="+91 98765 43210" required>
+                </div>
+            </div>
+            
+            <!-- Hidden fields -->
+            <input type="hidden" id="amount" value="2000">
+            <input type="hidden" id="currency" value="USD">
+            <input type="hidden" id="planName" value="Standard Plan">
+            <input type="hidden" id="months" value="1">
+            <input type="hidden" id="years" value="1">
+            
+            <button type="submit" class="btn-pay" id="payButton">
+                <i class="fa-solid fa-lock"></i> 
+                <span id="payButtonText">Pay Securely</span>
+                <span class="loading" id="loadingSpinner"><i class="fa-solid fa-spinner"></i></span>
+            </button>
+        </form>
+        
+        <div class="secure-badge">
+            <i class="fa-solid fa-shield-halved"></i> 
+            Secured by Razorpay • 256-bit encryption
+        </div>
+    </div>
+
+    <script>
+        // ===== Get URL Parameters =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const plan = urlParams.get('plan');
+            const amount = urlParams.get('amount'); // Amount in paise (USD * 100)
+            const months = urlParams.get('months');
+            const years = urlParams.get('years');
+            
+            console.log('Plan:', plan);
+            console.log('Amount (paise):', amount);
+            console.log('Months:', months);
+            console.log('Years:', years);
+            
+            // Calculate display amount in dollars
+            let displayAmount = '$20';
+            let displayTreatment = 'Standard Plan - Monthly Subscription';
+            let amountInPaise = 2000;
+            let planName = 'Standard Plan';
+            let monthsValue = 1;
+            let yearsValue = 1;
+            
+            if (plan === 'standard') {
+                const dollarAmount = amount ? (parseInt(amount) / 100) : 20;
+                monthsValue = months ? parseInt(months) : 1;
+                displayAmount = '$' + dollarAmount;
+                displayTreatment = `Standard Plan - ${monthsValue} Month${monthsValue > 1 ? 's' : ''} Subscription`;
+                amountInPaise = amount || '2000';
+                planName = `Standard Plan (${monthsValue} month${monthsValue > 1 ? 's' : ''})`;
+                
+            } else if (plan === 'annual') {
+                const dollarAmount = amount ? (parseInt(amount) / 100) : 192;
+                yearsValue = years ? parseInt(years) : 1;
+                displayAmount = '$' + dollarAmount;
+                displayTreatment = `Annual Plan - ${yearsValue} Year${yearsValue > 1 ? 's' : ''} Subscription (Save 20%)`;
+                amountInPaise = amount || '19200';
+                planName = `Annual Plan (${yearsValue} year${yearsValue > 1 ? 's' : ''})`;
+                
+            } else {
+                // Default fallback
+                displayAmount = '$20';
+                displayTreatment = 'Standard Plan - Monthly Subscription';
+                amountInPaise = '2000';
+                planName = 'Standard Plan';
+            }
+            
+            // Update the page
+            document.getElementById('displayAmount').textContent = displayAmount;
+            document.getElementById('displayTreatment').textContent = displayTreatment;
+            document.getElementById('amount').value = amountInPaise;
+            document.getElementById('planName').value = planName;
+            document.getElementById('months').value = monthsValue;
+            document.getElementById('years').value = yearsValue;
+        });
+
+        // ===== Payment Form Submit =====
+        document.getElementById('paymentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('patientName').value.trim();
+            const email = document.getElementById('patientEmail').value.trim();
+            const phone = document.getElementById('patientPhone').value.trim();
+            const amount = document.getElementById('amount').value;
+            const currency = document.getElementById('currency').value;
+            const planName = document.getElementById('planName').value;
+            const months = document.getElementById('months').value;
+            const years = document.getElementById('years').value;
+            
+            console.log('Submitting payment:');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Phone:', phone);
+            console.log('Amount (paise):', amount);
+            console.log('Currency:', currency);
+            console.log('Plan:', planName);
+            console.log('Months:', months);
+            console.log('Years:', years);
+            
+            // Validate
+            if (!name || !email || !phone) {
+                showError('Please fill in all required fields');
+                return;
+            }
+            
+            // Validate email
+            if (!email.includes('@') || !email.includes('.')) {
+                showError('Please enter a valid email address');
+                return;
+            }
+            
+            // Validate phone
+            if (phone.length < 10) {
+                showError('Please enter a valid phone number');
+                return;
+            }
+            
+            // Hide error
+            document.getElementById('errorMessage').classList.remove('show');
+            
+            // Show loading state
+            const payButton = document.getElementById('payButton');
+            const payButtonText = document.getElementById('payButtonText');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            
+            payButton.disabled = true;
+            payButtonText.textContent = 'Processing...';
+            loadingSpinner.classList.add('show');
+            
+            try {
+                // Prepare request data
+                const requestData = {
+                    amount: parseInt(amount),
+                    currency: currency,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    plan: planName,
+                    months: months,
+                    years: years
+                };
+                
+                console.log('Request Data:', requestData);
+                
+                // 1. Create order on backend
+                const orderResponse = await fetch('/api/payment/create-order.php', {
+
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                });
+                
+                const orderData = await orderResponse.json();
+                console.log('Order Response:', orderData);
+                
+                if (!orderData.success) {
+                    throw new Error(orderData.error || 'Failed to create payment order');
+                }
+                
+                // 2. Open Razorpay Checkout
+                const options = {
+                    key: orderData.key_id,
+                    amount: orderData.amount,
+                    currency: orderData.currency,
+                    name: 'Sudama Global Health',
+                    description: planName,
+                    image: 'https://vikashsaran04.github.io/sudamaglobalhealth.com/logo.jpg',
+                    order_id: orderData.order_id,
+                    prefill: {
+                        name: name,
+                        email: email,
+                        contact: phone
+                    },
+                    theme: {
+                        color: '#23376e'
+                    },
+                    modal: {
+                        ondismiss: function() {
+                            payButton.disabled = false;
+                            payButtonText.textContent = 'Pay Securely';
+                            loadingSpinner.classList.remove('show');
+                        }
+                    },
+                    handler: function(response) {
+                        verifyPayment(response, orderData.order_id);
+                    }
+                };
+                
+                const rzp = new Razorpay(options);
+                rzp.open();
+                
+            } catch (error) {
+                console.error('Payment Error:', error);
+                showError(error.message || 'Something went wrong. Please try again.');
+                payButton.disabled = false;
+                payButtonText.textContent = 'Pay Securely';
+                loadingSpinner.classList.remove('show');
+            }
+        });
+        
+        // ===== Verify Payment =====
+        async function verifyPayment(response, orderId) {
+            console.log('Payment Response:', response);
+            try {
+                const verifyResponse = await fetch('../payment/verify-payment.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        payment_id: response.razorpay_payment_id,
+                        order_id: response.razorpay_order_id,
+                        signature: response.razorpay_signature
+                    })
+                });
+                
+                const verifyData = await verifyResponse.json();
+                console.log('Verify Response:', verifyData);
+                
+                if (verifyData.success) {
+                    window.location.href = '../payment/payment-success.php?payment_id=' + response.razorpay_payment_id;
+                } else {
+                    showError('Payment verification failed. Please contact support.');
+                    resetButton();
+                }
+            } catch (error) {
+                console.error('Verify Error:', error);
+                showError('Something went wrong. Please contact support.');
+                resetButton();
+            }
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            document.getElementById('errorText').textContent = message;
+            errorDiv.classList.add('show');
+        }
+        
+        function resetButton() {
+            const payButton = document.getElementById('payButton');
+            const payButtonText = document.getElementById('payButtonText');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            
+            payButton.disabled = false;
+            payButtonText.textContent = 'Pay Securely';
+            loadingSpinner.classList.remove('show');
+        }
+    </script>
+
+</body>
+</html>

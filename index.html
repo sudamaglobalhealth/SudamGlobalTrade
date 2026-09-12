@@ -1,0 +1,3835 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudama Global Health | Medical Tourism in India</title>
+    <meta name="description"
+        content="Trusted Medical Tourism Company in India for Patients from the Europe, Central Africa, USA, Canada, UK and CIS. World-class healthcare and full patient support.">
+
+    <!-- Font Awesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts: Montserrat & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+       1. CORE SYSTEM & VARIABLES
+       ========================================================================== */
+
+        :root {
+            --bg-crisp: #FFFFFF;
+            --bg-soft: #FEF8EA;
+            --bg-accent: #FEF8EA;
+            --primary-blue: #23376e;
+            --primary-dark: #23376e;
+            --secondary-yellow: #ffc35a;
+            --secondary-hover: #e0ab4a;
+            --accent-green: #ffc35a;
+            --accent-green-hover: #e0ab4a;
+            --text-main: #23376e;
+            --text-muted: #3d4f7c;
+            --text-light: #6e7d9f;
+            --border-color: #E6DFD3;
+            --card-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0px 18px 36px rgba(35, 55, 110, 0.14);
+            --radius-sm: 12px;
+            --radius-md: 24px;
+            --radius-lg: 32px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            overflow-x: hidden !important;
+            max-width: 100% !important;
+            width: 100%;
+            position: relative;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Montserrat', 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-soft);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            padding-top: 76px;
+            background-color: var(--bg-soft);
+            font-family: 'Montserrat', 'Poppins', sans-serif;
+        }
+
+        /* RTL Support */
+
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive Utilities */
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+            background-color: var(--bg-soft);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary-yellow);
+            border-radius: 2px;
+            margin: 8px auto 0 auto;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 48px auto;
+        }
+
+        /* Organic Splash Background Decorator */
+
+        .organic-splash-container {
+            position: relative;
+        }
+
+        .organic-splash-container::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(255, 195, 90, 0.25) 0%, rgba(254, 248, 234, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Adjustable Media Utility Classes */
+
+        .logo-img {
+            width: 74px;
+            height: 74px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .hospital-card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 24px 24px 0 0;
+        }
+
+        .doctor-avatar {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--secondary-yellow);
+            box-shadow: 0 6px 16px rgba(35, 55, 110, 0.12);
+            margin: 0 auto 16px auto;
+        }
+
+        .partner-logo-img {
+            width: 130px;
+            height: 60px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: var(--transition);
+        }
+
+        /* Buttons & Interactive Pill Elements */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            white-space: normal;
+            word-break: break-word;
+            text-align: center;
+            min-height: 48px;
+            line-height: 1.35;
+            box-sizing: border-box;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
+            font-weight: 800;
+            box-shadow: 0 6px 18px rgba(255, 195, 90, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-hover);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(255, 195, 90, 0.45);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--secondary-yellow);
+            color: var(--primary-blue);
+            font-weight: 800;
+            border-radius: 50px;
+            box-shadow: 0 8px 24px rgba(255, 195, 90, 0.35);
+            animation: pulse-yellow 2s infinite;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--secondary-hover);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            background: #FFFFFF;
+            border-radius: 50px;
+            font-weight: 700;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+            border-color: var(--secondary-yellow);
+        }
+
+        @keyframes pulse-yellow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 195, 90, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 14px rgba(255, 195, 90, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 195, 90, 0);
+            }
+        }
+
+        /* ==========================================================================
+       2. HEADER & NAVIGATION
+       ========================================================================== */
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #FFFFFF;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(35, 55, 110, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 76px;
+        }
+
+        .brand-logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-highlight {
+            color: var(--secondary-yellow);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-hover);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-yellow);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        /* Language Switcher */
+
+        .lang-switcher {
+            position: relative;
+        }
+
+        .lang-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        .flag-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: 54px;
+            right: 0;
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 30px rgba(35, 55, 110, 0.15);
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            width: 170px;
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 1010;
+        }
+
+        [dir="rtl"] .lang-dropdown {
+            right: auto;
+            left: 0;
+        }
+
+        .lang-dropdown.show {
+            display: flex;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .lang-option:hover {
+            background-color: var(--bg-soft);
+            color: var(--primary-blue);
+        }
+
+        /* Drawer Toggle Button */
+
+        .drawer-toggle-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-soft);
+            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .drawer-toggle-btn:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+        }
+
+        /* Drawer Sidebar */
+
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(35, 55, 110, 0.4);
+            backdrop-filter: blur(6px);
+            z-index: 1999;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .drawer-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            max-width: 85vw;
+            height: 100vh;
+            background: #FFFFFF;
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            box-shadow: -10px 0 40px rgba(35, 55, 110, 0.15);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+        }
+
+        [dir="rtl"] .drawer-menu {
+            right: auto;
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .drawer-overlay.active .drawer-menu {
+            transform: translateX(0);
+        }
+
+        [dir="rtl"] .drawer-overlay.active .drawer-menu {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .drawer-close {
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--text-muted);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--bg-soft);
+        }
+
+        .drawer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .drawer-link {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .drawer-link i {
+            width: 20px;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .drawer-link:hover {
+            background: var(--bg-soft);
+            color: var(--primary-blue);
+        }
+
+        /* ==========================================================================
+       3. HERO SECTION & DYNAMIC CAROUSEL & SEARCH
+       ========================================================================== */
+
+        .hero-section {
+            position: relative;
+            background: #23376e;
+            color: #FFFFFF;
+            padding: 100px 0 130px 0;
+            overflow: hidden;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            opacity: 0.45;
+            filter: brightness(0.85) contrast(1.08) saturate(1.1);
+            transform: scale(1.02);
+            z-index: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(35, 55, 110, 0.40) 0%, rgba(20, 32, 66, 0.75) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-bottom-shadow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 110px;
+            background: linear-gradient(to bottom, rgba(254, 248, 234, 0) 0%, rgba(254, 248, 234, 0.4) 40%, rgba(254, 248, 234, 0.85) 75%, #FEF8EA 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero-bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 920px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--secondary-yellow);
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 195, 90, 0.3);
+        }
+
+        .hero-title-wrapper {
+            min-height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 2.7rem;
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            color: #FFFFFF;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-title.slide-out {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .hero-title.slide-in-start {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 36px;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Live Search Bar */
+
+        .hero-search-wrapper {
+            position: relative;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+
+        .search-input-box {
+            display: flex;
+            align-items: center;
+            background: #FFFFFF;
+            border-radius: 50px;
+            padding: 6px 8px 6px 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .search-input-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.05rem;
+            color: var(--primary-blue);
+            padding: 12px 0;
+            background: transparent;
+        }
+
+        .search-btn {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .search-btn:hover {
+            background: var(--secondary-hover);
+            color: var(--primary-blue);
+        }
+
+        /* Live Search Results Dropdown */
+
+        .search-results-dropdown {
+            position: absolute;
+            top: 68px;
+            left: 0;
+            right: 0;
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            box-shadow: 0 15px 40px rgba(35, 55, 110, 0.2);
+            max-height: 320px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+            text-align: left;
+        }
+
+        [dir="rtl"] .search-results-dropdown {
+            text-align: right;
+        }
+
+        .search-results-dropdown.active {
+            display: block;
+        }
+
+        .search-result-item {
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            color: var(--primary-blue);
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .search-result-item:hover {
+            background: var(--bg-soft);
+            color: var(--primary-blue);
+        }
+
+        .result-type-tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .tag-hospital {
+            background: #FEF8EA;
+            border: 1px solid #ffc35a;
+            color: var(--primary-blue);
+        }
+
+        .tag-doctor {
+            background: #FEF8EA;
+            border: 1px solid #ffc35a;
+            color: var(--primary-blue);
+        }
+
+        /* Benefit Showcase Banner */
+
+        .benefits-banner {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .benefit-chip {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 195, 90, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .benefit-chip i {
+            color: var(--secondary-yellow);
+        }
+
+        /* ==========================================================================
+       4. SECTION: SPECIALIZED TREATMENTS WE OFFER (CLEAN ICON CARDS - NO PHOTOS)
+       ========================================================================== */
+
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .treatment-card-clean {
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            padding: 28px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .treatment-card-clean:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--secondary-yellow);
+        }
+
+        .treatment-icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--bg-soft);
+            color: var(--secondary-yellow);
+            border: 1px solid var(--secondary-yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .treatment-card-clean:hover .treatment-icon-box {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+        }
+
+        .treatment-title-clean {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .treatment-desc-clean {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        .whatsapp-cta-box {
+            margin-top: 48px;
+            text-align: center;
+        }
+
+/* ==========================================================================
+   5. SECTION: PLAN YOUR HEALTHCARE JOURNEY (WITH TIMELINE)
+   ========================================================================== */
+
+.journey-section {
+    background: var(--bg-soft);
+    padding: 70px 0;
+}
+
+/* ===== TIMELINE WRAPPER ===== */
+.journey-timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ===== TOP & BOTTOM ROWS ===== */
+.journey-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+}
+
+/* ===== JOURNEY CARDS ===== */
+.journey-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 28px 22px;
+    position: relative;
+    border: 1.5px solid var(--secondary-yellow);
+    box-shadow: 0 8px 32px rgba(35, 55, 110, 0.08);
+    transition: var(--transition);
+    overflow: hidden;
+    height: 100%;
+    min-height: 180px;
+}
+
+/* Glass effect shine overlay */
+.journey-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.journey-card:hover::before {
+    left: 100%;
+}
+
+.journey-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(35, 55, 110, 0.18);
+    border-color: var(--secondary-yellow);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.journey-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.step-number {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: rgba(35, 55, 110, 0.12);
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.step-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: rgba(255, 195, 90, 0.15);
+    color: var(--secondary-yellow);
+    border: 1.5px solid rgba(255, 195, 90, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.journey-card:hover .step-icon-box {
+    background: var(--secondary-yellow);
+    color: var(--primary-blue);
+    border-color: var(--secondary-yellow);
+}
+
+.journey-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.journey-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ===== TIMELINE ARROWS ===== */
+.timeline-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    position: relative;
+}
+
+.timeline-arrow svg {
+    display: block;
+}
+
+.arrow-label {
+    font-size: 0.6rem;
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    opacity: 0.6;
+    white-space: nowrap;
+}
+
+.top-arrow .arrow-label {
+    margin-bottom: 0;
+}
+
+/* ===== VERTICAL CONNECTOR (03 → 04) ===== */
+.journey-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    position: relative;
+}
+
+.connector-line {
+    width: 2px;
+    height: 20px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #ffc35a 0px,
+        #ffc35a 6px,
+        transparent 6px,
+        transparent 10px
+    );
+}
+
+.connector-arrow-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connector-arrow-down svg {
+    display: block;
+}
+
+.connector-label {
+    font-size: 0.6rem;
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .journey-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .timeline-arrow,
+    .journey-connector {
+        display: none;
+    }
+
+    .journey-card {
+        min-height: auto;
+        padding: 24px 20px;
+    }
+
+    .journey-timeline-wrapper {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .journey-section {
+        padding: 50px 0;
+    }
+
+    .journey-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .step-number {
+        font-size: 1.8rem;
+    }
+
+    .step-icon-box {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+
+    .journey-title {
+        font-size: 1rem;
+    }
+
+    .journey-desc {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .journey-card {
+        padding: 18px 14px;
+    }
+}
+        /* ==========================================================================
+       6. SECTION: OUR PARTNER HOSPITALS IN INDIA
+       ========================================================================== */
+
+        .hospitals-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .hospital-card {
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .hospital-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--secondary-yellow);
+        }
+
+        .hospital-content {
+            padding: 24px;
+        }
+
+        .hospital-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .hospital-location {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+
+        .hospital-card.hidden-hospital {
+            display: none;
+        }
+
+        .view-more-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* ==========================================================================
+       7. LOGO CAROUSEL: NETWORK OF HOSPITALS (UPDATED)
+       ========================================================================== */
+
+        .logo-marquee-section {
+            background: var(--bg-soft);
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 40px;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-logo-card {
+            background: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(35, 55, 110, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            height: 72px;
+            transition: var(--transition);
+        }
+
+        .partner-logo-card:hover {
+            border-color: var(--secondary-yellow);
+            box-shadow: 0 4px 14px rgba(35, 55, 110, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .partner-logo-img {
+            max-height: 48px;
+            max-width: 150px;
+            object-fit: contain;
+            display: block;
+            transition: var(--transition);
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ==========================================================================
+       8. SECTION: KNOW LEADING DOCTORS & SPECIALITIES
+       ========================================================================== */
+
+        .doctors-section {
+            background: var(--bg-soft);
+        }
+
+        .doctor-carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 10px 0 30px 0;
+        }
+
+        .doctor-carousel-track {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-bottom: 15px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .doctor-carousel-track::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .doctor-carousel-track::-webkit-scrollbar-thumb {
+            background: var(--primary-blue);
+            border-radius: 10px;
+        }
+
+        .doctor-card {
+            flex: 0 0 calc(33.333% - 16px);
+            scroll-snap-align: start;
+            background: #FFFFFF;
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--secondary-yellow);
+        }
+
+        .doctor-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 16px auto;
+            display: block;
+            border: 3px solid var(--secondary-yellow);
+            box-shadow: 0 4px 12px rgba(35, 55, 110, 0.08);
+            transition: var(--transition);
+        }
+
+        .doctor-card:hover .doctor-avatar {
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+        }
+
+        .doctor-name {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 4px;
+        }
+
+        .doctor-spec-badge {
+            display: inline-block;
+            background: var(--bg-soft);
+            color: var(--primary-blue);
+            border: 1px solid var(--secondary-yellow);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .doctor-spec-badge:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+        }
+
+        .doctor-hospital {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .carousel-nav-btn {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(35, 55, 110, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+            color: var(--primary-blue);
+        }
+
+        .carousel-nav-btn:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+            border-color: var(--secondary-yellow);
+        }
+
+        .nav-btn-left {
+            left: 0;
+        }
+
+        .nav-btn-right {
+            right: 0;
+        }
+
+        [dir="rtl"] .nav-btn-left {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="rtl"] .nav-btn-right {
+            right: auto;
+            left: 0;
+        }
+
+        .doctors-grid-view {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        /* ==========================================================================
+       9. SECTION: APPOINTMENT FORM (SPLIT VIEW)
+       ========================================================================== */
+
+        .appointment-section {
+            background: var(--bg-soft);
+        }
+
+        .appointment-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--bg-soft);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            align-items: stretch;
+        }
+
+        .appointment-visual {
+            background: var(--primary-blue);
+            color: #FFFFFF;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .appointment-visual-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .appointment-feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .appointment-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #FFFFFF;
+        }
+
+        .appointment-feature-item i {
+            color: var(--secondary-yellow);
+            font-size: 1.2rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .appointment-form-box {
+            padding: 40px;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--primary-blue);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition);
+            background: #FFFFFF;
+            color: var(--primary-blue);
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(35, 55, 110, 0.15);
+        }
+
+        .phone-input-group {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+            max-width: 100%;
+            align-items: center;
+            box-sizing: border-box;
+            flex-wrap: nowrap;
+        }
+
+        #patientPhoneCode {
+            flex: 0 0 105px;
+            width: 105px;
+            max-width: 105px;
+            padding: 10px 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            background: var(--bg-soft);
+            height: 46px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+        }
+
+        #patientPhoneCode.is-custom-mode {
+            flex: 0 0 85px;
+            width: 85px;
+            max-width: 85px;
+            padding: 10px 4px;
+        }
+
+        #patientCustomPhoneCode {
+            flex: 0 0 80px;
+            width: 80px;
+            max-width: 80px;
+            padding: 10px 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            height: 46px;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            color: var(--primary-blue);
+        }
+
+        #patientPhone {
+            flex: 1 1 0%;
+            min-width: 0;
+            width: 100%;
+            height: 46px;
+            box-sizing: border-box;
+        }
+
+        /* ==========================================================================
+       10. FLOATING ACTION BUTTONS (WHATSAPP ABOVE SUPPORT PHONE)
+       ========================================================================== */
+
+        .floating-actions-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            z-index: 1500;
+        }
+
+        [dir="rtl"] .floating-actions-container {
+            right: auto;
+            left: 24px;
+        }
+
+        .floating-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(35, 55, 110, 0.25);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.5rem;
+            position: relative;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-whatsapp-stacked {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+            animation: pulse-yellow 2s infinite;
+        }
+
+        .floating-phone-stacked {
+            background: var(--primary-blue);
+            color: var(--secondary-yellow);
+            border: 2px solid var(--secondary-yellow);
+        }
+
+        /* Tooltip label on hover */
+
+        .floating-btn .btn-tooltip {
+            position: absolute;
+            right: 70px;
+            background: var(--primary-blue);
+            color: #FFFFFF;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        [dir="rtl"] .floating-btn .btn-tooltip {
+            right: auto;
+            left: 70px;
+        }
+
+        .floating-btn:hover .btn-tooltip {
+            opacity: 1;
+        }
+
+        /* ==========================================================================
+       11. FOOTER SECTION
+       ========================================================================== */
+
+        .site-footer {
+            background: #23376e;
+            color: #FFFFFF;
+            padding: 70px 0 30px 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-yellow);
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: #FFFFFF;
+        }
+
+        .footer-contact-item i {
+            color: var(--secondary-yellow);
+            margin-top: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 0.88rem;
+            color: #FFFFFF;
+        }
+
+        .footer-bottom a {
+            color: var(--secondary-yellow);
+            font-weight: 600;
+        }
+
+        .footer-social-group {
+            margin-top: 20px;
+        }
+
+        .footer-social-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons-list {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 195, 90, 0.35);
+            text-decoration: none;
+        }
+
+        .social-icon-btn:hover {
+            background: var(--secondary-yellow);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(255, 195, 90, 0.35);
+        }
+
+        /* ==========================================================================
+       12. MOBILE OPTIMIZATIONS & MEDIA QUERIES
+       ========================================================================== */
+
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-title-wrapper {
+                min-height: 95px;
+            }
+
+            .treatments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .doctor-card {
+                flex: 0 0 calc(50% - 12px);
+            }
+
+            .hospitals-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .doctors-grid-view {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .appointment-split {
+                grid-template-columns: 1fr;
+            }
+
+            .appointment-visual {
+                padding: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.98rem;
+                margin-bottom: 32px;
+            }
+
+            .hero-section {
+                padding: 50px 16px 85px 16px;
+            }
+
+            .hero-bg-img {
+                object-position: center 15%;
+                opacity: 0.5;
+            }
+
+            .hero-title-wrapper {
+                min-height: 80px;
+                margin-bottom: 16px;
+            }
+
+            .hero-title {
+                font-size: 1.65rem;
+                line-height: 1.3;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
+
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 6px 14px;
+                margin-bottom: 16px;
+            }
+
+            .hero-bottom-shadow {
+                height: 80px;
+            }
+
+            .search-input-box {
+                padding: 4px 6px 4px 16px;
+            }
+
+            .search-input-box input {
+                font-size: 0.95rem;
+            }
+
+            .search-btn {
+                padding: 10px 18px;
+                font-size: 0.88rem;
+            }
+
+            .benefits-banner {
+                gap: 10px;
+            }
+
+            .benefit-chip {
+                padding: 8px 14px;
+                font-size: 0.82rem;
+            }
+
+            .treatments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .journey-card {
+                padding: 20px;
+            }
+
+            .step-number {
+                font-size: 1.8rem;
+            }
+
+            .step-icon-box {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .doctor-card {
+                flex: 0 0 calc(100% - 20px);
+            }
+
+            .doctors-grid-view {
+                grid-template-columns: 1fr;
+            }
+
+            .appointment-form-box {
+                padding: 24px 16px;
+            }
+
+            .appointment-visual {
+                padding: 30px 20px;
+            }
+
+            .appointment-visual-title {
+                font-size: 1.5rem;
+            }
+
+            .floating-actions-container {
+                bottom: 16px;
+                right: 16px;
+                gap: 10px;
+            }
+
+            .floating-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .journey-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-name {
+                font-size: 1.15rem;
+            }
+        }
+        /* ==========================================================================
+   PARTNER LOGOS - TEXT STYLES (ADD THIS)
+   ========================================================================== */
+
+.partner-logo-text {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 0.3px;
+}
+
+.partner-logo-text br {
+    display: block;
+}
+
+/* Update partner-logo-card to support text */
+.partner-logo-card {
+    background: #FFFFFF;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(35, 55, 110, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    height: 72px;
+    transition: var(--transition);
+}
+
+.partner-logo-card:hover {
+    border-color: var(--secondary-yellow);
+    box-shadow: 0 4px 14px rgba(35, 55, 110, 0.12);
+    transform: translateY(-2px);
+}
+/* ===== LARGER PARTNER LOGO STYLES ===== */
+.partner-logo-card {
+    background: #FFFFFF;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(35, 55, 110, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    height: 100px;
+    transition: var(--transition);
+}
+
+.partner-logo-card:hover {
+    border-color: var(--secondary-yellow);
+    box-shadow: 0 4px 14px rgba(35, 55, 110, 0.12);
+    transform: translateY(-2px);
+}
+
+.partner-logo-img {
+    max-height: 80px;
+    max-width: 200px;
+    object-fit: contain;
+    display: block;
+    transition: var(--transition);
+}
+
+/* Adjust marquee spacing */
+.marquee-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="brand-logo-group">
+                <img src="https://vikashsaran04.github.io/sudamaglobalhealth.com/logo.jpg"
+                    alt="Sudama Global Health Logo" class="logo-img"
+                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=100&auto=format&fit=crop&q=80';">
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#treatments" class="nav-link" data-i18n="nav_treatments">Treatments</a>
+                <a href="#process" class="nav-link" data-i18n="nav_process">Process</a>
+                <a href="#hospitals" class="nav-link" data-i18n="nav_hospitals">Hospitals</a>
+                <!-- <a href="#doctors" class="nav-link" data-i18n="nav_doctors">Doctors</a> -->
+                <a href="#appointment" class="nav-link" data-i18n="nav_contact">Help/Contact</a>
+                <!-- <a href="blog.html" class="nav-link" data-i18n="nav_blog">Blog</a> -->
+                <a href="facilitator-partnership-progra.html" class="nav-link"
+                    data-i18n="nav_Partnership Program">Partnership Program</a>
+                <a href="subscription.html" class="nav-link" data-i18n="nav_subscription"> Health club</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Circular Language Selector -->
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="langBtn" aria-label="Select Language">
+                        <img src="https://flagcdn.com/w40/us.png" alt="English" class="flag-icon" id="currentFlag">
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <div class="lang-option"
+                            onclick="changeLanguage('en', 'https://flagcdn.com/w40/us.png', 'ltr')">
+                            <img src="https://flagcdn.com/w40/us.png" alt="US Flag" class="flag-icon"> English
+                        </div>
+                        <div class="lang-option"
+                            onclick="changeLanguage('fr', 'https://flagcdn.com/w40/fr.png', 'ltr')">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="France Flag" class="flag-icon"> Français
+                        </div>
+                        <div class="lang-option"
+                            onclick="changeLanguage('ar', 'https://flagcdn.com/w40/sa.png', 'rtl')">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Saudi Flag" class="flag-icon"> العربية
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Professional Drawer Toggle Button -->
+                <button class="drawer-toggle-btn" id="drawerToggleBtn" aria-label="Open Navigation Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Glassmorphic Mobile/Desktop Drawer Menu -->
+    <div class="drawer-overlay" id="drawerOverlay">
+        <div class="drawer-menu">
+            <div class="drawer-header">
+                <div class="brand-name">Sudama <span class="brand-highlight">Health</span></div>
+                <div class="drawer-close" id="drawerClose">&times;</div>
+            </div>
+            <div class="drawer-links">
+                <a href="index.html" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-house"></i> <span
+                        data-i18n="nav_home">Home</span></a>
+                <a href="index.html#treatments" class="drawer-link" onclick="closeDrawer()"><i
+                        class="fa-solid fa-stethoscope"></i> <span data-i18n="nav_treatments">Treatments</span></a>
+                <a href="index.html#process" class="drawer-link" onclick="closeDrawer()"><i
+                        class="fa-solid fa-clipboard-list"></i> <span data-i18n="nav_process">Process</span></a>
+                <a href="index.html#hospitals" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-hospital"></i>
+                    <span data-i18n="nav_hospitals">Hospitals</span></a>
+                <a href="index.html#doctors" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-user-doctor"></i>
+                    <span data-i18n="nav_doctors">Doctors</span></a>
+                <a href="index.html#appointment" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-headset"></i>
+                    <span data-i18n="nav_contact">Help & Contact</span></a>
+                <a href="blog.html" class="drawer-link"><i class="fa-solid fa-newspaper"></i> <span
+                        data-i18n="nav_blog">Blogs</span></a>
+                <a href="facilitator-partnership-progra.html" class="drawer-link active"><i
+                        class="fa-solid fa-handshake-simple"></i> <span data-i18n="nav_partnership">Partnership
+                        Program</span></a>
+                <a href="subscription.html" class="drawer-link active" onclick="closeDrawer()"><i
+                        class="fa-solid fa-crown"></i> <span data-i18n="nav_subscription"> Health club</span></a>
+                <a href="subscription.html" class="drawer-link" onclick="closeDrawer()">
+                    <!-- <i class="fa-solid fa-crown"></i> <span data-i18n="nav_subscription">Subscription</span> -->
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section class="hero-section" id="home">
+        <img src="BG.gif" alt="Doctor Background" class="hero-bg-img" referrerpolicy="no-referrer">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-bottom-shadow"></div>
+
+        <svg class="hero-bg-shapes" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <circle cx="10" cy="20" r="15" fill="#FFFFFF" />
+            <circle cx="85" cy="80" r="25" fill="#FFFFFF" />
+        </svg>
+
+        <div class="container hero-content">
+            <div class="hero-badge" data-i18n="hero_badge"><i class="fa-solid fa-award"></i> Top Rated Medical Tourism
+                Partner</div>
+            <div class="hero-title-wrapper">
+                <h1 class="hero-title" id="heroTitle" data-i18n="hero_title">
+                    Trusted Medical Tourism Company in India for Patients from the Europe, Central Africa, USA, Canada,
+                    UK and CIS
+                </h1>
+            </div>
+            <p class="hero-subtitle" data-i18n="hero_sub">
+                World-class healthcare in India with complete support for patients from Iraq, Saudi, UAE, Sudan,
+                Ethiopia, Uzbekistan and beyond.
+            </p>
+
+            <!-- Global Live Search Bar -->
+            <div class="hero-search-wrapper">
+                <div class="search-input-box">
+                    <input type="text" id="globalSearchInput" placeholder="Search treatment, doctor, or hospital..."
+                        aria-label="Search">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="search_btn">Search</span>
+                    </button>
+                </div>
+                <div class="search-results-dropdown" id="searchResultsDropdown"></div>
+            </div>
+
+            <!-- Benefits Banner -->
+            <div class="benefits-banner">
+                <div class="benefit-chip"><i class="fa-solid fa-bolt"></i> Zero Wait Time</div>
+                <div class="benefit-chip"><i class="fa-solid fa-passport"></i> 100% Visa Assistance</div>
+                <div class="benefit-chip"><i class="fa-solid fa-user-check"></i> Top 1% Surgeons</div>
+                <div class="benefit-chip"><i class="fa-solid fa-piggy-bank"></i> 50-70% Cost Savings</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION: SPECIALIZED TREATMENTS WE OFFER (ICON CARDS - NO PHOTOS)
+       ========================================================================== -->
+    <section class="section-padding" id="treatments">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title" data-i18n="treatments_title">Specialized Treatments We Offer</h2>
+                <p class="section-subtitle" data-i18n="treatments_sub">
+                    World class medical treatments in India for international patients. India is a global hub for
+                    advanced healthcare.
+                </p>
+            </div>
+
+            <div class="treatments-grid">
+                <!-- 1. Cardiology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Cardiology & Cardiac Surgery</h3>
+                    <p class="treatment-desc-clean">Heart bypass surgeries (CABG), valve replacements, pediatric cardiac care, and angioplasty at specialized centers.</p>
+                </div>
+
+                <!-- 2. Orthopedic -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-bone"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Orthopedics & Joint Replacements</h3>
+                    <p class="treatment-desc-clean">Robotic knee & hip replacements, minimally invasive total joint replacements, complex bone reconstructions, and sports medicine.</p>
+                </div>
+
+                <!-- 3. Neurology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Neurology & Neurosurgery</h3>
+                    <p class="treatment-desc-clean">Deep brain stimulation (DBS) for Parkinson's disease, brain tumor excisions, stroke rehabilitation, and complex neuro-interventional procedures.</p>
+                </div>
+
+                <!-- 4. Hemato Oncology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-vial-virus"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Hemato Oncology & BMT</h3>
+                    <p class="treatment-desc-clean">Bone Marrow Transplants (Autologous & Allogeneic) for leukemia, lymphoma, and severe blood disorders.</p>
+                </div>
+
+                <!-- 5. Oncology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-ribbon"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Oncology (Cancer Care)</h3>
+                    <p class="treatment-desc-clean">Comprehensive cancer care utilizing CyberKnife radiosurgery, Immunotherapy, proton beam therapy, targeted therapies, and surgical oncology.</p>
+                </div>
+
+                <!-- 6. Spine Surgery -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-align-center"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Spine & Scoliosis Surgery</h3>
+                    <p class="treatment-desc-clean">Deformity correction, complex spinal fusion surgeries, and keyhole spine surgeries performed by world-renowned specialists.</p>
+                </div>
+
+                <!-- 7. Paediatric Cardiac -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Paediatric Cardiac Care</h3>
+                    <p class="treatment-desc-clean">Specialized congenital heart defect corrections and pediatric surgeries with exceptionally high success rates.</p>
+                </div>
+
+                <!-- 8. Ophthalmology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Ophthalmology</h3>
+                    <p class="treatment-desc-clean">Corneal transplants, advanced Femto-LASIK, glaucoma management, and complex retinal repairs.</p>
+                </div>
+
+                <!-- 9. Urology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Urology & Kidney Transplant</h3>
+                    <p class="treatment-desc-clean">Laser kidney stone removal, robotic prostate treatments, and laparoscopic living donor kidney transplants.</p>
+                </div>
+
+                <!-- 10. Liver Transplant -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-lungs"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Liver Transplant & GI Surgery</h3>
+                    <p class="treatment-desc-clean">Living donor liver transplantation, high-success-rate liver transplants, complex hepato-biliary surgeries, and advanced therapeutic endoscopy.</p>
+                </div>
+
+                <!-- 11. Cardiothoracic -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Cardiac Thoracic & Vascular</h3>
+                    <p class="treatment-desc-clean">Thoracic tumor resections, aortic aneurysm repairs, and peripheral vascular reconstructions.</p>
+                </div>
+
+                <!-- 12. Radiation Oncology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Radiation Oncology</h3>
+                    <p class="treatment-desc-clean">Proton therapy, TrueBeam STx radiotherapy, and precise targeted tumor destruction with minimal side effects.</p>
+                </div>
+
+                <!-- ===== NEW CARDS ADDED BELOW ===== -->
+
+                <!-- 13. Fertility & IVF -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Fertility & IVF Treatments</h3>
+                    <p class="treatment-desc-clean">In-vitro fertilization (IVF), intracytoplasmic sperm injection (ICSI), and comprehensive reproductive endocrinology for couples seeking fertility solutions.</p>
+                </div>
+
+                <!-- 14. Cosmetic & Plastic Surgery -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Cosmetic & Plastic Surgery</h3>
+                    <p class="treatment-desc-clean">Facelifts, rhinoplasty (nose surgery), liposuction, tummy tucks (abdominoplasty), and advanced hair transplant treatments.</p>
+                </div>
+
+                <!-- 15. Dental Care & Maxillofacial Surgery -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Dental Care & Maxillofacial Surgery</h3>
+                    <p class="treatment-desc-clean">Full-mouth dental implants, porcelain veneers, root canal treatments, and corrective jaw surgeries for comprehensive oral care.</p>
+                </div>
+
+                <!-- 16. Organ Transplants -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Organ & Bone Marrow Transplants</h3>
+                    <p class="treatment-desc-clean">High-success-rate liver transplants, kidney transplants, and autologous or allogeneic bone marrow transplants with comprehensive pre and post-transplant care.</p>
+                </div>
+
+                <!-- 17. Gastroenterology & Hepatology -->
+                <div class="treatment-card-clean">
+                    <div class="treatment-icon-box">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h3 class="treatment-title-clean">Gastroenterology & Hepatology</h3>
+                    <p class="treatment-desc-clean">Advanced bariatric (weight-loss) surgeries, liver failure management, and therapeutic endoscopy for digestive disorders.</p>
+                </div>
+            </div>
+
+            <!-- WhatsApp Inquiry Button -->
+            <div class="whatsapp-cta-box">
+                <a href="https://wa.me/917020753181?text=Hello%20Sudama%20Global%20Health,%20I%20want%20to%20inquire%20about%20medical%20treatment%20in%20India."
+                    target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire About Treatment on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <!-- ==========================================================================
+   SECTION: PLAN YOUR HEALTHCARE JOURNEY (WITH TIMELINE)
+   ========================================================================== -->
+<section class="section-padding journey-section" id="process">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title" data-i18n="journey_title">Plan Your Healthcare Journey</h2>
+            <p class="section-subtitle" data-i18n="journey_sub">
+                Honest Guidance, Reliable Support, Seamless Journeys
+            </p>
+        </div>
+
+        <div class="journey-timeline-wrapper">
+            <!-- ===== TOP ROW: 01 → 02 → 03 ===== -->
+            <div class="journey-row">
+                <!-- Step 1 -->
+                <div class="journey-card glass-card">
+                    <div class="journey-card-header">
+                        <span class="step-number">01</span>
+                        <div class="step-icon-box"><i class="fa-solid fa-file-medical"></i></div>
+                    </div>
+                    <h3 class="journey-title">Provide Us Report</h3>
+                    <p class="journey-desc">Share your recent medical history, test reports, and doctor notes securely with our expert medical team.</p>
+                </div>
+
+                <!-- Arrow 01 → 02 -->
+                <div class="timeline-arrow top-arrow">
+                    <svg viewBox="0 0 60 20" width="60" height="20">
+                        <line x1="0" y1="10" x2="45" y2="10" stroke="#ffc35a" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="55,10 45,5 45,15" fill="#ffc35a"/>
+                    </svg>
+                    <span class="arrow-label">Step 1 → Step 2</span>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="journey-card glass-card">
+                    <div class="journey-card-header">
+                        <span class="step-number">02</span>
+                        <div class="step-icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+                    </div>
+                    <h3 class="journey-title">Get Medical Opinions</h3>
+                    <p class="journey-desc">Receive top surgeon opinions, tailored treatment plans, cost estimates, and duration options within 24 hours.</p>
+                </div>
+
+                <!-- Arrow 02 → 03 -->
+                <div class="timeline-arrow top-arrow">
+                    <svg viewBox="0 0 60 20" width="60" height="20">
+                        <line x1="0" y1="10" x2="45" y2="10" stroke="#ffc35a" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="55,10 45,5 45,15" fill="#ffc35a"/>
+                    </svg>
+                    <span class="arrow-label">Step 2 → Step 3</span>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="journey-card glass-card">
+                    <div class="journey-card-header">
+                        <span class="step-number">03</span>
+                        <div class="step-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+                    </div>
+                    <h3 class="journey-title">Pre-Arrival Arrangements</h3>
+                    <p class="journey-desc">Complete assistance with hospital choice, flight schedules, stay preferences, and custom translation aid.</p>
+                </div>
+            </div>
+
+            <!-- ===== CONNECTOR ARROW: 03 ↓ 06 ===== -->
+            <div class="journey-connector">
+                <div class="connector-line"></div>
+                <div class="connector-arrow-down">
+                    <svg viewBox="0 0 20 60" width="20" height="60">
+                        <line x1="10" y1="0" x2="10" y2="45" stroke="#ffc35a" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="10,55 5,45 15,45" fill="#ffc35a"/>
+                    </svg>
+                    <span class="connector-label">Step 3 → Step 4</span>
+                </div>
+            </div>
+
+            <!-- ===== BOTTOM ROW: 04 → 05 → 06 ===== -->
+            <div class="journey-row">
+                <!-- Step 4 -->
+                <div class="journey-card glass-card">
+                    <div class="journey-card-header">
+                        <span class="step-number">04</span>
+                        <div class="step-icon-box"><i class="fa-solid fa-passport"></i></div>
+                    </div>
+                    <h3 class="journey-title">Visa Support</h3>
+                    <p class="journey-desc">Prompt issuance of official Indian Medical Visa Invitation Letters and priority embassy clearance guidance.</p>
+                </div>
+
+                <!-- Arrow 04 → 05 -->
+                <div class="timeline-arrow bottom-arrow">
+                    <svg viewBox="0 0 60 20" width="60" height="20">
+                        <line x1="0" y1="10" x2="45" y2="10" stroke="#ffc35a" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="55,10 45,5 45,15" fill="#ffc35a"/>
+                    </svg>
+                    <span class="arrow-label">Step 4 → Step 5</span>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="journey-card glass-card">
+                    <div class="journey-card-header">
+                        <span class="step-number">05</span>
+                        <div class="step-icon-box"><i class="fa-solid fa-hospital-user"></i></div>
+                    </div>
+                    <h3 class="journey-title">Assistance in Treatments</h3>
+                    <p class="journey-desc">Airport pickup, dedicated personal patient coordinator, language interpreters, and seamless hospital admission.</p>
+                </div>
+
+                <!-- Arrow 05 → 06 -->
+                <div class="timeline-arrow bottom-arrow">
+                    <svg viewBox="0 0 60 20" width="60" height="20">
+                        <line x1="0" y1="10" x2="45" y2="10" stroke="#ffc35a" stroke-width="2" stroke-dasharray="4,4"/>
+                        <polygon points="55,10 45,5 45,15" fill="#ffc35a"/>
+                    </svg>
+                    <span class="arrow-label">Step 5 → Step 6</span>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="journey-card glass-card">
+                    <div class="journey-card-header">
+                        <span class="step-number">06</span>
+                        <div class="step-icon-box"><i class="fa-solid fa-heart-circle-check"></i></div>
+                    </div>
+                    <h3 class="journey-title">Fly Back & Follow-Up</h3>
+                    <p class="journey-desc">Post-treatment fitness clearance, discharge summary translation, and lifetime remote follow-up consultation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ==========================================================================
+       SECTION: OUR PARTNER HOSPITALS IN INDIA
+       ========================================================================== -->
+    <section class="section-padding" id="hospitals">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title" data-i18n="hospitals_title">Our Partner Hospitals in India</h2>
+                <p class="section-subtitle" data-i18n="hospitals_sub">
+                    Top Indian Hospitals for International Patients
+                </p>
+            </div>
+
+            <div class="hospitals-grid" id="hospitalsGrid">
+                <!-- Hospital 1: Reliance Hospital -->
+                <div class="hospital-card">
+                    <img src="https://www.rfhospital.org/sites/default/files/2025-07/rfh_hospital-img.jpg"
+                        alt="Reliance Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">Reliance Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Mumbai, Maharashtra</div>
+                        <a href="https://maps.google.com/?q=Reliance+Hospital+Mumbai" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 2: KIM Hospital -->
+                <div class="hospital-card">
+                    <img src="https://cdn.expresshealthcare.in/wp-content/uploads/2025/05/27160936/New-Project-19.jpg"
+                        alt="KIM Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">KIM Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Thane, Maharashtra</div>
+                        <a href="https://maps.google.com/?q=KIM+Hospital+Thane" target="_blank" class="btn btn-outline"
+                            style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 3: Apollo Hospital -->
+                <div class="hospital-card">
+                    <img src="https://static.hospidio.com/uploads/hospital/63/apollo-hospital-navi-mumbai.jpg.webp"
+                        alt="Apollo Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">Apollo Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Navi Mumbai, Maharashtra</div>
+                        <a href="https://maps.google.com/?q=Apollo+Hospital+Navi+Mumbai" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 4: Lilavati Hospital -->
+                <div class="hospital-card">
+                    <img src="https://listmyclinic.com/wp-content/uploads/2021/06/Lilavati-Hospital-and-Research-Centre.jpg"
+                        alt="Lilavati Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">Lilavati Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Mumbai, Maharashtra</div>
+                        <a href="https://maps.google.com/?q=Lilavati+Hospital+Mumbai" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 5: BLK Max Super Speciality Hospital -->
+                <div class="hospital-card">
+                    <img src="blkMax.png"
+                        alt="BLK Max Super Speciality Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">BLK Max Super Speciality Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            New Delhi, Delhi</div>
+                        <a href="https://maps.google.com/?q=BLK+Max+Super+Speciality+Hospital+Delhi" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 6: Kokilaben Dhirubhai Ambani Hospital -->
+                <div class="hospital-card hidden-hospital">
+                    <img src="https://static.wixstatic.com/media/0ccbd3_88737cce70b04e1babcbd803265ba277~mv2.jpeg/v1/fill/w_560,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0ccbd3_88737cce70b04e1babcbd803265ba277~mv2.jpeg"
+                        alt="Kokilaben Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">Kokilaben Dhirubhai Ambani Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Mumbai, Maharashtra</div>
+                        <a href="https://maps.google.com/?q=Kokilaben+Hospital+Mumbai" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 7: Fortis Hospital -->
+                <div class="hospital-card hidden-hospital">
+                    <img src="https://yapita-production.s3.ap-south-1.amazonaws.com/uploads/facility_photo/photo/03432411-660c-4d91-8673-29f3b83f44dc/Mulund-1.jpg"
+                        alt="Fortis Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">Fortis Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Mumbai, Maharashtra</div>
+                        <a href="https://maps.google.com/?q=Fortis+Hospital+Mumbai" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 8: Manipal Hospital -->
+                <div class="hospital-card hidden-hospital">
+                    <img src="https://www.globalcarehealth.com/img/hospitalsimg/Manipal-Hospital-Old-Airport-Road-Bengaluru-India-gchh51.webp"
+                        alt="Manipal Hospital" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">Manipal Hospital</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Bengaluru, Karnataka</div>
+                        <a href="https://maps.google.com/?q=Manipal+Hospital+Bengaluru" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hospital 9: MGM Healthcare -->
+                <div class="hospital-card hidden-hospital">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ZXnrjki0FeHIQXRg1ii2lXu7wOzSaWHWFzDmdMDE4PkO-QEWJlI7VnIW&s=10"
+                        alt="MGM Healthcare" class="hospital-card-img" referrerpolicy="no-referrer"
+                        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&auto=format&fit=crop&q=80';">
+                    <div class="hospital-content">
+                        <h3 class="hospital-name">MGM Healthcare</h3>
+                        <div class="hospital-location"><i class="fa-solid fa-location-dot" style="color:#0A58CA;"></i>
+                            Chennai, Tamil Nadu</div>
+                        <a href="https://maps.google.com/?q=MGM+Healthcare+Chennai" target="_blank"
+                            class="btn btn-outline" style="padding: 8px 16px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-map-location-dot"></i> View Location
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more-container">
+                <button class="btn btn-primary" id="toggleHospitalsBtn" onclick="toggleHospitals()">
+                    <i class="fa-solid fa-hospital"></i> <span id="toggleHospitalsText">View All Hospitals</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION: OUR TRUSTED NETWORK OF TOP HOSPITALS (UPDATED MARQUEE)
+       ========================================================================== -->
+   <section class="logo-marquee-section">
+    <div class="container text-center" style="margin-bottom: 24px;">
+        <h3
+            style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); font-weight: 700;">
+            Trusted Partner Hospitals & Medical Networks
+        </h3>
+    </div>
+    <div class="marquee-track">
+    <!-- Reliance Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="reliancelogo.png" alt="Reliance Hospital"
+            class="partner-logo-img" style="max-height: 200px; max-width: 400px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- KIM Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="kimslogo.png" alt="KIM Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- Apollo Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="appolologo.png" alt="Apollo Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- Lilavati Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="lilavati.png" alt="Lilavati Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551076805-e1869033e561?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- BLK Max Super Speciality Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="blk.png" alt="BLK Max Super Speciality Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- Kokilaben Dhirubhai Ambani Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="kokilapng.png" alt="Kokilaben Dhirubhai Ambani Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 400px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- Fortis Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="fortis.png" alt="Fortis Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- Manipal Hospital -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="manipal.png" alt="Manipal Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <!-- MGM Healthcare -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="mgm.png" alt="MGM Healthcare"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&auto=format&fit=crop&q=80';">
+    </div>
+
+    <!-- Duplicate set for seamless continuous marquee animation -->
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="reliancelogo.png" alt="Reliance Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="kimslogo.png" alt="KIM Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="appolologo.png" alt="Apollo Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="lilavati.png" alt="Lilavati Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551076805-e1869033e561?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="blk.png" alt="BLK Max Super Speciality Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="kokilapng.png" alt="Kokilaben Dhirubhai Ambani Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="fortis.png" alt="Fortis Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="manipal.png" alt="Manipal Hospital"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=200&auto=format&fit=crop&q=80';">
+    </div>
+    <div class="partner-logo-card" style="min-width: 220px; height: 100px; padding: 12px 24px;">
+        <img src="mgm.png" alt="MGM Healthcare"
+            class="partner-logo-img" style="max-height: 80px; max-width: 200px;"
+            referrerpolicy="no-referrer"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&auto=format&fit=crop&q=80';">
+    </div>
+</div>
+</section>
+
+    <!-- ==========================================================================
+       SECTION: KNOW LEADING DOCTORS & SPECIALITIES
+       ========================================================================== -->
+    <section class="section-padding doctors-section" id="doctors">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title" data-i18n="doctors_title">Know the Leading Doctors & Specialities</h2>
+                <p class="section-subtitle" data-i18n="doctors_sub">
+                    Renowned surgeons and specialists providing top-tier healthcare in India
+                </p>
+            </div>
+
+            <!-- Carousel View -->
+            <div class="doctor-carousel-wrapper" id="doctorCarouselWrapper">
+                <button class="carousel-nav-btn nav-btn-left" onclick="scrollDoctors(-1)" aria-label="Previous Doctor">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav-btn nav-btn-right" onclick="scrollDoctors(1)" aria-label="Next Doctor">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="doctor-carousel-track" id="doctorCarouselTrack">
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmx50VyHagaOZqQSxDZJjKb_BpIDBAgcJIjTGWGp1QVWvvMLUafkTZDgsM9HmxP4jc6ud5RC5Gd24zHFUTDaAVj28wkgjGSzBqwd3PAcggji0d4nYlqK_31An3ejf8tpnGKVy2jdRJoelB3=s1360-w1360-h1020-rw"
+                            alt="Prof. Dr. Suresh Advani" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Prof. Dr. Suresh Advani</h3>
+                        <span class="doctor-spec-badge">Medical Oncology</span>
+                        <div class="doctor-hospital">Nanavati Max Hospital, Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card">
+                        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnFnITskRfrxEvrmi7Un1jtmTEVase54H9_Vk8hoH7oxRYx0EyOcJ2nLLAtZvEkeR3M5YKxcqV--Rn50wZlsBQvMcZ9Zu9GgRpmUNzESrxEAogCY7qPOU_hJhIrxLYBLeT1Gs4=s1360-w1360-h1020-rw"
+                            alt="Dr. Anil K. D’Cruz" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Anil K. D’Cruz</h3>
+                        <span class="doctor-spec-badge">Surgical Oncology</span>
+                        <div class="doctor-hospital">Apollo Hospitals, Navi Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card">
+                        <img src="https://www.cureindia.com/images/uploads/doctors/image/576704369dr-k-r-balakrishnan-heart-transplant-surgeon.jpg"
+                            alt="Dr. KR Balakrishnan" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. KR Balakrishnan</h3>
+                        <span class="doctor-spec-badge">Cardiac Surgery & Heart Transplant</span>
+                        <div class="doctor-hospital">MGM Healthcare, Chennai</div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="doctor-card">
+                        <img src="https://www.forerunnershealthcare.com/dr-anil-vaidya/images/dr-anil-vaidya-best-multi-organ-transplant-surgeon-in-chennai.jpg"
+                            alt="Dr. Anil Vaidya" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Anil Vaidya</h3>
+                        <span class="doctor-spec-badge">Multi-Organ Transplant</span>
+                        <div class="doctor-hospital">MGM Healthcare, Chennai</div>
+                    </div>
+
+                    <!-- Doctor 5 -->
+                    <div class="doctor-card">
+                        <img src="https://kdahweb-static-1.kokilabenhospital.com/kdah-2019/product/1583331422.jpg"
+                            alt="Dr. Abhaya Kumar" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Abhaya Kumar</h3>
+                        <span class="doctor-spec-badge">Neurosurgery</span>
+                        <div class="doctor-hospital">Kokilaben Hospital, Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 6 -->
+                    <div class="doctor-card">
+                        <img src="https://max-website20-images.s3.ap-south-1.amazonaws.com/2_ec90b453ad.jpg"
+                            alt="Prof. Dr. Pradeep Bhosale" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Prof. Dr. Pradeep Bhosale</h3>
+                        <span class="doctor-spec-badge">Orthopaedics & Joint</span>
+                        <div class="doctor-hospital">Nanavati Max Hospital, Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 7 -->
+                    <div class="doctor-card">
+                        <img src="https://www.rfhospital.org/sites/default/files/2025-02/Dr%20Amit%20Maydeo.jpg"
+                            alt="Dr. Amit Maydeo" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Amit Maydeo</h3>
+                        <span class="doctor-spec-badge">Gastroenterology & Hepatology</span>
+                        <div class="doctor-hospital">HN Reliance Hospital, Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 8 -->
+                    <div class="doctor-card">
+                        <img src="https://mgmcancerinstitute.in/static/fd13c2b21070cd3f6a6d716ef2fe6c91/9e4c9/doctors-51.webp.webp"
+                            alt="Dr. M. Deenadayalan" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. M. Deenadayalan</h3>
+                        <span class="doctor-spec-badge">Paediatric Oncology / Haematology</span>
+                        <div class="doctor-hospital">MGM Healthcare, Chennai</div>
+                    </div>
+
+                    <!-- Doctor 9 -->
+                    <div class="doctor-card">
+                        <img src="https://s3-us-west-2.amazonaws.com/kdahweb-static.kokilabenhospital.com/kdah-2019/product/1579763204.jpg"
+                            alt="Dr. Sanjay Pandey" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Sanjay Pandey</h3>
+                        <span class="doctor-spec-badge">Urology</span>
+                        <div class="doctor-hospital">Kokilaben Hospital, Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 10 -->
+                    <div class="doctor-card">
+                        <img src="https://www.fortishealthcare.com/drupal-data/doctors/dr-atul--limaye-3049.jpg"
+                            alt="Dr. Atul Limaye" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Atul Limaye</h3>
+                        <span class="doctor-spec-badge">Interventional Cardiology</span>
+                        <div class="doctor-hospital">Fortis Hospital, Mumbai</div>
+                    </div>
+
+                    <!-- Doctor 11 -->
+                    <div class="doctor-card">
+                        <img src="https://www.stempeutics.com/sites/default/files/styles/large/public/2022-02/Dr_H_Sudarshan_Ballal.jpg"
+                            alt="Dr. H. Sudarshan Ballal" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. H. Sudarshan Ballal</h3>
+                        <span class="doctor-spec-badge">Nephrology</span>
+                        <div class="doctor-hospital">Manipal Hospital, Bengaluru</div>
+                    </div>
+
+                    <!-- Doctor 12 -->
+                    <div class="doctor-card">
+                        <img src="https://drupal-cdn-hfaeddcdbng5hfbg.a01.azurefd.net/sites/default/files/2026-06/dr-ravindra-nikalji.jpg"
+                            alt="Dr. Ravindra Nikalji" class="doctor-avatar" referrerpolicy="no-referrer"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&auto=format&fit=crop&q=80';">
+                        <h3 class="doctor-name">Dr. Ravindra Nikalji</h3>
+                        <span class="doctor-spec-badge">Nephrology</span>
+                        <div class="doctor-hospital">Apollo Hospitals, Navi Mumbai</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more-container">
+                <button class="btn btn-primary" id="toggleDoctorsBtn" onclick="toggleDoctorsView()">
+                    <i class="fa-solid fa-user-doctor"></i> <span id="toggleDoctorsText">View All Doctors</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION: NEED HELP? BOOK AN APPOINTMENT (SPLIT FORM)
+       ========================================================================== -->
+    <section class="section-padding appointment-section" id="appointment">
+        <div class="container">
+            <div class="appointment-split">
+                <div class="appointment-visual">
+                    <h2 class="appointment-visual-title">Need Expert Medical Guidance?</h2>
+                    <p style="opacity: 0.9; font-size: 1.05rem; line-height: 1.6;">
+                        Get a complimentary medical opinion and full treatment estimate from India's top hospitals. Our
+                        medical desk is available 24/7.
+                    </p>
+
+                    <div class="appointment-feature-list">
+                        <div class="appointment-feature-item">
+                            <i class="fa-solid fa-circle-check"></i> Free Treatment Cost Estimates
+                        </div>
+                        <div class="appointment-feature-item">
+                            <i class="fa-solid fa-circle-check"></i> 24-Hour Doctor Response
+                        </div>
+                        <div class="appointment-feature-item">
+                            <i class="fa-solid fa-circle-check"></i> Complete Visa & Travel Assistance
+                        </div>
+                        <div class="appointment-feature-item">
+                            <i class="fa-solid fa-circle-check"></i> Dedicated Multilingual Patient Care
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appointment-form-box">
+                    <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--primary-dark); margin-bottom: 20px;"
+                        data-i18n="book_consultation">
+                        Book Free Consultation
+                    </h3>
+
+                    <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)">
+                        <!-- 1. Full Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientName" data-i18n="patient_name">Patient Full Name
+                                *</label>
+                            <input type="text" id="patientName" class="form-control"
+                                placeholder="Enter patient's full name" required>
+                        </div>
+
+                        <!-- 2. Country -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientCountry" data-i18n="select_country">Select Country
+                                *</label>
+                            <select id="patientCountry" class="form-control" required
+                                onchange="handleCountrySelection(this.value)">
+                                <option value="" disabled selected>Select country</option>
+                                <option value="Iraq" data-code="+964">Iraq (+964)</option>
+                                <option value="Saudi Arabia" data-code="+966">Saudi Arabia (+966)</option>
+                                <option value="United Arab Emirates" data-code="+971">United Arab Emirates (UAE) (+971)
+                                </option>
+                                <option value="Sudan" data-code="+249">Sudan (+249)</option>
+                                <option value="Ethiopia" data-code="+251">Ethiopia (+251)</option>
+                                <option value="Uzbekistan" data-code="+998">Uzbekistan (+998)</option>
+                                <option value="France" data-code="+33">France (+33)</option>
+                                <option value="India" data-code="+91">India (+91)</option>
+                                <option value="Oman" data-code="+968">Oman (+968)</option>
+                                <option value="Kuwait" data-code="+965">Kuwait (+965)</option>
+                                <option value="Qatar" data-code="+974">Qatar (+974)</option>
+                                <option value="Bahrain" data-code="+973">Bahrain (+973)</option>
+                                <option value="Yemen" data-code="+967">Yemen (+967)</option>
+                                <option value="Kenya" data-code="+254">Kenya (+254)</option>
+                                <option value="Nigeria" data-code="+234">Nigeria (+234)</option>
+                                <option value="Tanzania" data-code="+255">Tanzania (+255)</option>
+                                <option value="Somalia" data-code="+252">Somalia (+252)</option>
+                                <option value="Kazakhstan" data-code="+7">Kazakhstan (+7)</option>
+                                <option value="United Kingdom" data-code="+44">United Kingdom (+44)</option>
+                                <option value="United States / Canada" data-code="+1">United States / Canada (+1)
+                                </option>
+                                <option value="Other International" data-code="+1">Other International</option>
+                                <option value="Other" data-code="custom">✏️ Other Country (Specify Custom Name...)
+                                </option>
+                            </select>
+                            <div id="customCountryGroup" style="display: none; margin-top: 8px;">
+                                <input type="text" id="patientCustomCountry" class="form-control"
+                                    placeholder="Enter custom country name..."
+                                    data-i18n-placeholder="custom_country_placeholder">
+                            </div>
+                        </div>
+
+                        <!-- 3. City -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientCity" data-i18n="city_name">Enter City Name *</label>
+                            <input type="text" id="patientCity" class="form-control"
+                                placeholder="Enter city (e.g. Baghdad, Riyadh)" required>
+                        </div>
+
+                        <!-- 4. Mobile Phone -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientPhone" data-i18n="mobile_number">Mobile Number
+                                (WhatsApp) *</label>
+                            <div class="phone-input-group">
+                                <select id="patientPhoneCode" class="form-control" aria-label="Country Dialing Code"
+                                    onchange="handlePhoneCodeSelection(this.value)">
+                                    <option value="+964">🇮🇶 +964</option>
+                                    <option value="+966">🇸🇦 +966</option>
+                                    <option value="+971">🇦🇪 +971</option>
+                                    <option value="+249">🇸🇩 +249</option>
+                                    <option value="+251">🇪🇹 +251</option>
+                                    <option value="+998">🇺🇿 +998</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+91" selected>🇮🇳 +91</option>
+                                    <option value="+968">🇴🇲 +968</option>
+                                    <option value="+965">🇰🇼 +965</option>
+                                    <option value="+974">🇶🇦 +974</option>
+                                    <option value="+973">🇧🇭 +973</option>
+                                    <option value="+967">🇾🇪 +967</option>
+                                    <option value="+254">🇰🇪 +254</option>
+                                    <option value="+234">🇳🇬 +234</option>
+                                    <option value="+255">🇹🇿 +255</option>
+                                    <option value="+252">🇸🇴 +252</option>
+                                    <option value="+7">🇰🇿 +7</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="custom">✏️ Custom (+...)</option>
+                                </select>
+                                <input type="text" id="patientCustomPhoneCode" class="form-control" placeholder="+..."
+                                    style="display: none;" aria-label="Custom Country Code"
+                                    data-i18n-placeholder="custom_code_placeholder">
+                                <input type="tel" id="patientPhone" class="form-control"
+                                    placeholder="Enter phone number" required>
+                            </div>
+                        </div>
+
+                        <!-- 5. Email -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientEmail" data-i18n="email_id">Email ID *</label>
+                            <input type="email" id="patientEmail" class="form-control"
+                                placeholder="yourname@example.com" required>
+                        </div>
+
+                        <!-- 6. Date of Birth -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientDob" data-i18n="dob">Date of Birth *</label>
+                            <input type="date" id="patientDob" class="form-control" required>
+                        </div>
+
+                        <!-- 7. Medical Condition -->
+                        <div class="form-group">
+                            <label class="form-label" for="patientCondition" data-i18n="medical_condition">Describe
+                                Current Medical Condition *</label>
+                            <textarea id="patientCondition" class="form-control" rows="3"
+                                placeholder="Describe diagnosis, treatment needed, or symptoms..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="book_whatsapp">Book Appointment via
+                                WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FLOATING ACTION BUTTONS (WHATSAPP ABOVE PREMIUM SUPPORT PHONE)
+       ========================================================================== -->
+    <div class="floating-actions-container">
+        <!-- WhatsApp Floating Button (Above) - Abhijeet Borade -->
+        <a href="https://wa.me/917020753181?text=Hello%20Sudama%20Global%20Health,%20I%20need%20assistance%20with%20medical%20treatment."
+            target="_blank" class="floating-btn floating-whatsapp-stacked" aria-label="WhatsApp Us">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="btn-tooltip">Chat on WhatsApp (Abhijeet)</span>
+        </a>
+
+        <!-- Premium Support Phone Button (Below) - Amol Badad -->
+        <a href="tel:+917030643132" class="floating-btn floating-phone-stacked" aria-label="Call Support">
+            <i class="fa-solid fa-headset"></i>
+            <span class="btn-tooltip">24/7 Medical Support (Amol)</span>
+        </a>
+    </div>
+
+    <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand & Address -->
+                <div>
+                    <div class="footer-brand-title">Sudama Global <span style="color:var(--accent-green);">Health</span>
+                    </div>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">
+                        India's premier medical tourism facilitation organization supporting international patients with
+                        end-to-end healthcare coordination, visa assistance, and hospital stays.
+                    </p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Sai bungalow, Indiranagar, Nashik, Maharashtra, India - 422009</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#hospitals">Hospitals</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#appointment">Help & Contact</a></li>
+                        <li><a href="blog.html"> Blogs</a></li>
+                        <li><a href="subscription.html">Health Cub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="footer-title">Contact & Support</h4>
+                    <!-- Abhijeet Borade - WhatsApp & Call -->
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Abhijeet Borade (CEO)</div>
+                            <a href="https://wa.me/917020753181" target="_blank"
+                                style="color: #FFFFFF; font-weight: 700;">+91 7020753181</a>
+                        </div>
+                    </div>
+                    <!-- Amol Badad - WhatsApp & Call -->
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Amol Badad (Co-Founder)</div>
+                            <a href="https://wa.me/917030643132" target="_blank"
+                                style="color: #FFFFFF; font-weight: 700;">+91 7030643132</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:contact@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">contact@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+                     <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:info@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">info@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <div style="font-size: 0.8rem; text-transform: uppercase;">Email Us</div>
+                            <a href="mailto:Amol@sudamaglobalhealth.com"
+                                style="color: #FFFFFF; font-weight: 700;">Amol@sudamaglobalhealth.com</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Social Media Links -->
+            <div class="footer-social-group">
+                <div class="footer-social-title">Follow Us</div>
+                <div class="social-icons-list">
+                    <a href="https://www.instagram.com/sudamaglobal.health?igsh=MXM1dzh2anU0MG55Mw%3D%3D&utm_source=qr"
+                        target="_blank" class="social-icon-btn" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1JP7JDQgjq/?mibextid=wwXIfr" target="_blank"
+                        class="social-icon-btn" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/sudamaglobaltrade/" target="_blank"
+                        class="social-icon-btn" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/917020753181" target="_blank" class="social-icon-btn" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 Sudama Global Health. All Rights Reserved.</div>
+                <div>Design & Development by <a href="https://www.linkedin.com/in/jayeshjadhav11" target="_blank">Jayesh Jadhav</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       JAVASCRIPT FUNCTIONALITY
+       ========================================================================== -->
+    <script>
+        /* ==========================================================================
+               1. MULTI-LANGUAGE DICTIONARY & TOGGLE LOGIC
+               ========================================================================== */
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_treatments: "Treatments",
+                nav_process: "Process",
+                nav_hospitals: "Hospitals",
+                nav_doctors: "Doctors",
+                nav_contact: "Help/Contact",
+                nav_blog: "Blogs",
+                hero_badge: "Top Rated Medical Tourism Partner",
+                hero_title: "Trusted Medical Tourism Company in India for Patients from the Europe, Central Africa, USA, Canada, UK and CIS",
+                hero_sub: "World-class healthcare in India with complete support for patients from Iraq, Saudi, UAE, Sudan, Ethiopia, Uzbekistan and beyond.",
+                search_btn: "Search",
+                search_placeholder: "Search doctors, hospitals, or treatments...",
+                treatments_title: "Specialized Treatments We Offer",
+                treatments_sub: "World class medical treatments in India for international patients. India is a global hub for advanced healthcare.",
+                journey_title: "Plan Your Healthcare Journey",
+                journey_sub: "Honest Guidance, Reliable Support, Seamless Journeys",
+                hospitals_title: "Our Partner Hospitals in India",
+                hospitals_sub: "Top Indian Hospitals for International Patients",
+                doctors_title: "Know the Leading Doctors & Specialities",
+                doctors_sub: "Renowned surgeons and specialists providing top-tier healthcare in India",
+                appointment_title: "Need Expert Medical Guidance?",
+                appointment_sub: "Get a complimentary medical opinion and full treatment estimate from India's top hospitals. Our medical desk is available 24/7.",
+                book_consultation: "Book Free Consultation",
+                patient_name: "Patient Full Name *",
+                select_country: "Select Country *",
+                city_name: "Enter City Name *",
+                mobile_number: "Mobile Number (WhatsApp) *",
+                email_id: "Email ID *",
+                dob: "Date of Birth *",
+                medical_condition: "Describe Current Medical Condition *",
+                book_whatsapp: "Book Appointment via WhatsApp",
+                view_hospitals: "View All Hospitals",
+                view_doctors: "View All Doctors",
+                quick_links: "Quick Links",
+                contact_support: "Contact & Support",
+                custom_country_placeholder: "Enter custom country name...",
+                custom_code_placeholder: "e.g. +351"
+            },
+            fr: {
+                nav_home: "Accueil",
+                nav_treatments: "Traitements",
+                nav_process: "Processus",
+                nav_hospitals: "Hôpitaux",
+                nav_doctors: "Médecins",
+                nav_contact: "Aide/Contact",
+                nav_blog: "Blogs",
+                hero_badge: "Partenaire de tourisme médical le mieux noté",
+                hero_title: "Société de tourisme médical de confiance en Inde pour les patients du Moyen-Orient, d'Afrique et de la CEE",
+                hero_sub: "Soins de santé de classe mondiale en Inde avec un accompagnement complet pour les patients d'Irak, d'Arabie Saoudite, des EAU, du Soudan, d'Éthiopie, d'Ouzbékistan et d'ailleurs.",
+                search_btn: "Rechercher",
+                search_placeholder: "Rechercher des médecins, hôpitaux ou traitements...",
+                treatments_title: "Traitements Spécialisés Proposés",
+                treatments_sub: "Traitements médicaux de classe mondiale en Inde pour les patients internationaux. L'Inde est un pôle mondial de soins de santé avancés.",
+                journey_title: "Planifiez Votre Parcours de Santé",
+                journey_sub: "Conseils sincères, soutien fiable, parcours fluide",
+                hospitals_title: "Nos Hôpitaux Partenaires en Inde",
+                hospitals_sub: "Meilleurs hôpitaux indiens pour les patients internationaux",
+                doctors_title: "Découvrez les Grands Médecins et Spécialités",
+                doctors_sub: "Chirurgiens et spécialistes réputés offrant des soins d'excellence en Inde",
+                appointment_title: "Besoin d'un Avis Médical Expert ?",
+                appointment_sub: "Obtenez un avis médical gratuit et un devis de traitement complet auprès des meilleurs hôpitaux indiens. Notre bureau médical est disponible 24/7.",
+                book_consultation: "Réserver une Consultation Gratuite",
+                patient_name: "Nom complet du patient *",
+                select_country: "Sélectionner le pays *",
+                city_name: "Entrer la ville *",
+                mobile_number: "Numéro de téléphone (WhatsApp) *",
+                email_id: "Adresse e-mail *",
+                dob: "Date de naissance *",
+                medical_condition: "Décrire l'état de santé actuel *",
+                book_whatsapp: "Réserver via WhatsApp",
+                view_hospitals: "Voir tous les hôpitaux",
+                view_doctors: "Voir tous les médecins",
+                quick_links: "Liens Rapides",
+                contact_support: "Contact & Assistance",
+                custom_country_placeholder: "Entrez le nom de votre pays...",
+                custom_code_placeholder: "ex. +351"
+            },
+            ar: {
+                nav_home: "الرئيسية",
+                nav_treatments: "العلاجات المتخصصة",
+                nav_process: "خطوات العلاج",
+                nav_hospitals: "المستشفيات",
+                nav_doctors: "الأطباء",
+                nav_contact: "المساعدة والاتصال",
+                nav_blog: "المدونة الطبية",
+                hero_badge: "الشريك الموثوق للسياحة العلاجية في الهند",
+                hero_title: "شركة السياحة العلاجية الموثوقة في الهند لمرضى الشرق الأوسط وأفريقيا ودول الكومنولث",
+                hero_sub: "رعاية صحية عالمية المستوى في الهند مع دعم كامل للمرضى من العراق والسعودية والإمارات والسودان وإثيوبيا وأوزباكستان.",
+                search_btn: "بحث",
+                search_placeholder: "ابحث عن الأطباء، المستشفيات، أو العلاجات...",
+                treatments_title: "العلاجات المتخصصة التي نقدمها",
+                treatments_sub: "علاجات طبية عالمية المستوى في الهند للمرضى الدوليين. الهند هي المركز العالمي للرعاية الصحية المتقدمة.",
+                journey_title: "خطط لرحلتك العلاجية",
+                journey_sub: "توجيه صادق، دعم موثوق، ورحلات علاجية سلسة",
+                hospitals_title: "المستشفيات الشريكة لنا في الهند",
+                hospitals_sub: "أفضل المستشفيات الهندية للمرضى الدوليين",
+                doctors_title: "تعرف على كبار الأطباء والتخصصات",
+                doctors_sub: "أبرز الجراحين والاستشاريين لتقديم أفضل رعاية صحية في الهند",
+                appointment_title: "هل تحتاج إلى استشارة طبية متخصصة؟",
+                appointment_sub: "احصل على رأي طبي مجاني وتقدير كلفة العلاج من أفضل مستشفيات الهند. مكتبنا الطبي متاح على مدار الساعة.",
+                book_consultation: "حجز استشارة مجانية",
+                patient_name: "الاسم الكامل للمريض *",
+                select_country: "اختر الدولة *",
+                city_name: "أدخل اسم المدينة *",
+                mobile_number: "رقم الهاتف (واتساب) *",
+                email_id: "البريد الإلكتروني *",
+                dob: "تاريخ الميلاد *",
+                medical_condition: "وصف الحالة الطبية الحالية *",
+                book_whatsapp: "حجز موعد عبر الواتساب",
+                view_hospitals: "عرض جميع المستشفيات",
+                view_doctors: "عرض جميع الأطباء",
+                quick_links: "روابط سريعة",
+                contact_support: "التواصل والدعم",
+                custom_country_placeholder: "أدخل اسم الدولة...",
+                custom_code_placeholder: "رمز كـ +351"
+            }
+        };
+
+        // Toggle Language Dropdown
+        const langBtn = document.getElementById('langBtn');
+        const langDropdown = document.getElementById('langDropdown');
+
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            langDropdown.classList.remove('show');
+        });
+
+        let currentLanguage = 'en';
+
+        function changeLanguage(langKey, flagUrl, direction) {
+            currentLanguage = langKey;
+            localStorage.setItem('sgh_lang', langKey);
+            localStorage.setItem('sgh_flag', flagUrl);
+            localStorage.setItem('sgh_dir', direction);
+
+            const flagEl = document.getElementById('currentFlag');
+            if (flagEl) flagEl.src = flagUrl;
+            document.documentElement.dir = direction;
+            if (langDropdown) langDropdown.classList.remove('show');
+
+            const dict = translations[langKey] || translations['en'];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.placeholder = dict[key];
+                }
+            });
+
+            const searchInputEl = document.getElementById('globalSearchInput');
+            if (searchInputEl && dict['search_placeholder']) {
+                searchInputEl.placeholder = dict['search_placeholder'];
+            }
+
+            updateHeroSentencesForLanguage(langKey);
+        }
+
+        // Auto Country Phone Code Sync
+        const countryToCodeMap = {
+            "Iraq": "+964",
+            "Saudi Arabia": "+966",
+            "United Arab Emirates": "+971",
+            "Sudan": "+249",
+            "Ethiopia": "+251",
+            "Uzbekistan": "+998",
+            "France": "+33",
+            "India": "+91",
+            "Oman": "+968",
+            "Kuwait": "+965",
+            "Qatar": "+974",
+            "Bahrain": "+973",
+            "Yemen": "+967",
+            "Kenya": "+254",
+            "Nigeria": "+234",
+            "Tanzania": "+255",
+            "Somalia": "+252",
+            "Kazakhstan": "+7",
+            "United Kingdom": "+44",
+            "United States / Canada": "+1",
+            "Other International": "+1"
+        };
+
+        function handleCountrySelection(countryName) {
+            const customCountryGroup = document.getElementById('customCountryGroup');
+            const customCountryInput = document.getElementById('patientCustomCountry');
+
+            if (countryName === 'Other') {
+                if (customCountryGroup) customCountryGroup.style.display = 'block';
+                if (customCountryInput) customCountryInput.required = true;
+                handlePhoneCodeSelection('custom');
+                const codeSelect = document.getElementById('patientPhoneCode');
+                if (codeSelect) codeSelect.value = 'custom';
+            } else {
+                if (customCountryGroup) customCountryGroup.style.display = 'none';
+                if (customCountryInput) {
+                    customCountryInput.required = false;
+                    customCountryInput.value = '';
+                }
+                updateCountryPhoneCode(countryName);
+            }
+        }
+
+        function handlePhoneCodeSelection(codeValue) {
+            const customCodeInput = document.getElementById('patientCustomPhoneCode');
+            const phoneCodeSelect = document.getElementById('patientPhoneCode');
+
+            if (codeValue === 'custom') {
+                if (customCodeInput) {
+                    customCodeInput.style.display = 'block';
+                    customCodeInput.required = true;
+                }
+                if (phoneCodeSelect) {
+                    phoneCodeSelect.classList.add('is-custom-mode');
+                }
+            } else {
+                if (customCodeInput) {
+                    customCodeInput.style.display = 'none';
+                    customCodeInput.required = false;
+                    customCodeInput.value = '';
+                }
+                if (phoneCodeSelect) {
+                    phoneCodeSelect.classList.remove('is-custom-mode');
+                }
+            }
+        }
+
+        function updateCountryPhoneCode(countryName) {
+            const codeSelect = document.getElementById('patientPhoneCode');
+            if (!codeSelect) return;
+            const matchedCode = countryToCodeMap[countryName];
+            if (matchedCode) {
+                codeSelect.value = matchedCode;
+                handlePhoneCodeSelection(matchedCode);
+            }
+        }
+
+        /* ==========================================================================
+           2. DRAWER SIDEBAR TOGGLE
+           ========================================================================== */
+        const drawerToggleBtn = document.getElementById('drawerToggleBtn');
+        const drawerOverlay = document.getElementById('drawerOverlay');
+        const drawerClose = document.getElementById('drawerClose');
+
+        drawerToggleBtn.addEventListener('click', () => {
+            drawerOverlay.classList.add('active');
+        });
+
+        drawerClose.addEventListener('click', closeDrawer);
+        drawerOverlay.addEventListener('click', (e) => {
+            if (e.target === drawerOverlay) closeDrawer();
+        });
+
+        function closeDrawer() {
+            drawerOverlay.classList.remove('active');
+        }
+
+        /* ==========================================================================
+           3. LIVE SEARCH FILTER (HOSPITALS & DOCTORS)
+           ========================================================================== */
+        const searchableData = [{
+            name: "Reliance Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "KIM Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "Apollo Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "Lilavati Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "BLK Max Super Speciality Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "Kokilaben Dhirubhai Ambani Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "Fortis Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "Manipal Hospital",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "MGM Healthcare",
+            type: "Hospital",
+            tagClass: "tag-hospital",
+            targetId: "hospitals"
+        },
+        {
+            name: "Prof. Dr. Suresh Advani - Medical Oncology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Anil K. D’Cruz - Surgical Oncology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. KR Balakrishnan - Cardiac Surgery",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Anil Vaidya - Multi-Organ Transplant",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Abhaya Kumar - Neurosurgery",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Prof. Dr. Pradeep Bhosale - Orthopaedics",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Amit Maydeo - Gastroenterology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. M. Deenadayalan - Paediatric Oncology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Sanjay Pandey - Urology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Atul Limaye - Cardiology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. H. Sudarshan Ballal - Nephrology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Dr. Ravindra Nikalji - Nephrology",
+            type: "Doctor",
+            tagClass: "tag-doctor",
+            targetId: "doctors"
+        },
+        {
+            name: "Cardiology",
+            type: "Treatment",
+            tagClass: "tag-doctor",
+            targetId: "treatments"
+        },
+        {
+            name: "Orthopedic & Joint Replacement",
+            type: "Treatment",
+            tagClass: "tag-doctor",
+            targetId: "treatments"
+        },
+        {
+            name: "Neurology",
+            type: "Treatment",
+            tagClass: "tag-doctor",
+            targetId: "treatments"
+        },
+        {
+            name: "Bone Marrow Transplant (BMT)",
+            type: "Treatment",
+            tagClass: "tag-doctor",
+            targetId: "treatments"
+        },
+        {
+            name: "Oncology (Cancer Care)",
+            type: "Treatment",
+            tagClass: "tag-doctor",
+            targetId: "treatments"
+        },
+        {
+            name: "Liver Transplant",
+            type: "Treatment",
+            tagClass: "tag-doctor",
+            targetId: "treatments"
+        }
+        ];
+
+        const searchInput = document.getElementById('globalSearchInput');
+        const searchDropdown = document.getElementById('searchResultsDropdown');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                if (!query) {
+                    searchDropdown.classList.remove('active');
+                    searchDropdown.innerHTML = '';
+                    return;
+                }
+
+                const matches = searchableData.filter(item => item.name.toLowerCase().includes(query));
+                if (matches.length === 0) {
+                    searchDropdown.innerHTML = `<div class="search-result-item" style="cursor:default; color:#94A3B8;">No results found</div>`;
+                } else {
+                    searchDropdown.innerHTML = matches.map(item => `
+            <div class="search-result-item" onclick="scrollToTarget('${item.targetId}')">
+              <span>${item.name}</span>
+              <span class="result-type-tag ${item.tagClass}">${item.type}</span>
+            </div>
+          `).join('');
+                }
+                searchDropdown.classList.add('active');
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (searchDropdown && !e.target.closest('.hero-search-wrapper')) {
+                searchDropdown.classList.remove('active');
+            }
+        });
+
+        function scrollToTarget(targetId) {
+            if (searchDropdown) searchDropdown.classList.remove('active');
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                targetEl.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        /* ==========================================================================
+           4. HOSPITALS SHOW MORE / LESS TOGGLE
+           ========================================================================== */
+        let hospitalsExpanded = false;
+
+        function toggleHospitals() {
+            const hiddenHospitals = document.querySelectorAll('.hidden-hospital');
+            const toggleText = document.getElementById('toggleHospitalsText');
+            hospitalsExpanded = !hospitalsExpanded;
+
+            hiddenHospitals.forEach(hosp => {
+                hosp.style.display = hospitalsExpanded ? 'block' : 'none';
+            });
+
+            if (toggleText) {
+                const dict = translations[currentLanguage] || translations['en'];
+                toggleText.textContent = hospitalsExpanded ? 'Show Less' : (dict['view_hospitals'] || 'View All Hospitals');
+            }
+        }
+
+        /* ==========================================================================
+           5. DOCTORS CAROUSEL & GRID VIEW TOGGLE
+           ========================================================================== */
+        function scrollDoctors(direction) {
+            const track = document.getElementById('doctorCarouselTrack');
+            const scrollAmount = track.clientWidth * 0.8;
+            track.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        let doctorsExpanded = false;
+
+        function toggleDoctorsView() {
+            const wrapper = document.getElementById('doctorCarouselWrapper');
+            const track = document.getElementById('doctorCarouselTrack');
+            const toggleText = document.getElementById('toggleDoctorsText');
+            doctorsExpanded = !doctorsExpanded;
+
+            if (doctorsExpanded) {
+                track.className = 'doctors-grid-view';
+                if (toggleText) toggleText.textContent = 'Carousel View';
+                document.querySelectorAll('.carousel-nav-btn').forEach(btn => btn.style.display = 'none');
+            } else {
+                track.className = 'doctor-carousel-track';
+                const dict = translations[currentLanguage] || translations['en'];
+                if (toggleText) toggleText.textContent = dict['view_doctors'] || 'View All Doctors';
+                document.querySelectorAll('.carousel-nav-btn').forEach(btn => btn.style.display = 'flex');
+            }
+        }
+
+        /* ==========================================================================
+           6. APPOINTMENT FORM SUBMISSION TO WHATSAPP
+           ========================================================================== */
+        function handleAppointmentSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('patientName').value.trim();
+            let country = document.getElementById('patientCountry').value;
+            if (country === 'Other') {
+                const customCountryVal = document.getElementById('patientCustomCountry').value.trim();
+                country = customCountryVal || 'Other (Custom)';
+            }
+
+            const city = document.getElementById('patientCity').value.trim();
+
+            let phoneCode = document.getElementById('patientPhoneCode').value;
+            if (phoneCode === 'custom') {
+                const customCodeVal = document.getElementById('patientCustomPhoneCode').value.trim();
+                phoneCode = customCodeVal ? (customCodeVal.startsWith('+') ? customCodeVal : '+' + customCodeVal) : '+';
+            }
+
+            const phoneNum = document.getElementById('patientPhone').value.trim();
+            const email = document.getElementById('patientEmail').value.trim();
+            const dob = document.getElementById('patientDob').value;
+            const condition = document.getElementById('patientCondition').value.trim();
+
+            const fullPhone = `${phoneCode} ${phoneNum}`;
+
+            const message = `*New Medical Appointment Booking*%0A` +
+                `----------------------------------%0A` +
+                `*Patient Name:* ${encodeURIComponent(name)}%0A` +
+                `*Country:* ${encodeURIComponent(country)}%0A` +
+                `*City:* ${encodeURIComponent(city)}%0A` +
+                `*Phone:* ${encodeURIComponent(fullPhone)}%0A` +
+                `*Email:* ${encodeURIComponent(email)}%0A` +
+                `*Date of Birth:* ${encodeURIComponent(dob)}%0A` +
+                `*Medical Condition:* ${encodeURIComponent(condition)}%0A` +
+                `----------------------------------%0A` +
+                `Sent via Sudama Global Health Web Portal`;
+
+            window.open(`https://wa.me/917020753181?text=${message}`, '_blank');
+        }
+
+        /* ==========================================================================
+           7. HERO TITLE 5-SECOND SLIDE ANIMATION
+           ========================================================================== */
+        const heroSentencesMap = {
+            en: [
+                "Trusted Medical Tourism Company in India for Patients from the Europe, Central Africa, USA, Canada, UK and CIS",
+                "Global Wellness Pathways - Your journey to health begins across horizons.",
+                "Care Across Continents - Bringing expertise and compassion closer to you.",
+                "Seamless Healing Journey - From travel to treatment, we make it effortless.",
+                "Beyond Boundaries Wellness - Connecting you to trusted care worldwide.",
+                "Global Health Compass - Guiding patients to excellence, across the globe."
+            ],
+            fr: [
+                "Société de tourisme médical de confiance en Inde pour les patients du Moyen-Orient, d'Afrique et de la CEE",
+                "Voies de Bien-être Mondial - Votre parcours vers la santé commence au-delà des horizons.",
+                "Soins À Travers Les Continents - Apporter expertise et compassion au plus près de vous.",
+                "Parcours de Guérison Fluide - Du voyage au traitement, nous le rendons sans effort.",
+                "Bien-être Sans Frontières - Vous connecter à des soins de confiance dans le monde entier.",
+                "Boussole de Santé Mondiale - Guider les patients vers l'excellence à travers le monde."
+            ],
+            ar: [
+                "شركة السياحة العلاجية الموثوقة في الهند لمرضى الشرق الأوسط وأفريقيا ودول الكومنولث",
+                "مسارات العافية العالمية - رحلتك نحو الصحة تبدأ عبر الآفاق.",
+                "رعاية عبر القارات - نقرب إليك الخبرات الطبية واللمسة الإنسانية.",
+                "رحلة علاجية سلسة - نسهل عليك كل الخطوات من السفر إلى العلاج.",
+                "عافية بلا حدود - نصلك بأرقى مستويات الرعاية الموثوقة حول العالم.",
+                "بوصلة الصحة العالمية - نرافقك ونوجهك نحو التميز الطبي أينما كنت."
+            ]
+        };
+
+        let activeHeroSentences = heroSentencesMap.en;
+        let currentSentenceIdx = 0;
+        const heroTitleEl = document.getElementById('heroTitle');
+
+        function updateHeroSentencesForLanguage(langKey) {
+            activeHeroSentences = heroSentencesMap[langKey] || heroSentencesMap.en;
+            currentSentenceIdx = 0;
+            if (heroTitleEl) {
+                heroTitleEl.textContent = activeHeroSentences[0];
+            }
+        }
+
+        if (heroTitleEl) {
+            setInterval(() => {
+                heroTitleEl.classList.add('slide-out');
+                setTimeout(() => {
+                    currentSentenceIdx = (currentSentenceIdx + 1) % activeHeroSentences.length;
+                    heroTitleEl.textContent = activeHeroSentences[currentSentenceIdx];
+                    heroTitleEl.classList.remove('slide-out');
+                    heroTitleEl.classList.add('slide-in-start');
+                    requestAnimationFrame(() => {
+                        setTimeout(() => {
+                            heroTitleEl.classList.remove('slide-in-start');
+                        }, 50);
+                    });
+                }, 600);
+            }, 5000);
+        }
+
+        // Auto load saved language from localStorage on initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('sgh_lang') || 'en';
+            const savedFlag = localStorage.getItem('sgh_flag') || 'https://flagcdn.com/w40/us.png';
+            const savedDir = localStorage.getItem('sgh_dir') || 'ltr';
+            changeLanguage(savedLang, savedFlag, savedDir);
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+
+</html>
